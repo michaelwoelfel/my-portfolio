@@ -1,8 +1,10 @@
 .header {
     background-image: url("/assets/img/hero-bg.png");
-    height: 500px;
-    max-width: 100%;
-    font-family: "Montserrat";
+    height: 1028px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #5988FF;
   }
 
   .header-menu {
@@ -10,15 +12,95 @@
     justify-content: space-between;
     height: 117px;
     margin-left: 100px;
-    
+    align-items: center;
+    font-family: "Montserrat";
   }
 
-  .header-text {
+  .introduction {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .introduction-text {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
     margin-right: 100px;
   }
-  .michael {
-    height: 400px;
+
+  .hello {
+    font-family: "Montserrat";
+    font-size: 64px;
   }
+
+  .font {
+    font-family: 'Baloo';
+    font-size: 128px;
+  }
+
+  span {
+    margin: 0;
+    padding: 0;
+  }
+
+ 
+
+  .header-text {
+    display: flex;
+    gap: 30px;
+    margin-right: 100px;
+    cursor: pointer;
+  }
+
+  .header-link {
+   font-size: 23px;
+   text-decoration: none;
+   box-shadow: inset 0 0 0 0 #5988FF;
+  color: #5988FF;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  transition: color .2s ease-in-out, box-shadow .2s ease-in-out;
+   &:hover {
+      box-shadow: inset 150px 0 0 0 #5988FF;
+      color: white;
+   }
+  }
+
+  .michael {
+    height: 90vh;
+    width: 30vw;
+    margin-left: 100px;
+  }
+
+  .header-picture {
+  width: 64px;
+  height: 69px;
+  }
+
+  .scroll-and-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .scroll {
+    font-family: "Montserrat";
+    font-size: 23px;
+  }
+
+  .blue-bar {
+    height: 330px;
+    background-color: #5988FF;
+    width: 2px;
+    margin-top: 10px;
+  }
+
+
+
 
   
   
