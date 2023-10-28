@@ -3,6 +3,7 @@
 
   body {
     margin: 0;
+    max-width: 100%;
   }
 
 
@@ -17,3 +18,6 @@
     src: url('assets/fonts/baloo/Baloo-Regular.ttf');
   }
   
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

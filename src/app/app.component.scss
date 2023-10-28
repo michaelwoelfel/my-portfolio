@@ -2,3 +2,11 @@ body{
     margin: 0;
 }
 
+.blue-bubble {
+    position: absolute;
+  top: 1010px;
+  left: 50%;
+  z-index: 2;
+  width: 15vw;
+  transform: translate(-50%, -50%);
+}

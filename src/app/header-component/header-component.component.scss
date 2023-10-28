@@ -1,55 +1,63 @@
 .header {
+  position: relative;
     background-image: url("/assets/img/hero-bg.png");
-    height: 1028px;
-    width: 100%;
+    height: 1010px;
+    max-width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     color: #5988FF;
   }
 
   .header-menu {
+    height: 10%;
     display: flex;
     justify-content: space-between;
-    height: 117px;
-    margin-left: 100px;
     align-items: center;
     font-family: "Montserrat";
+  
   }
 
   .introduction {
+    max-height: 90%;
     display: flex;
     justify-content: space-between;
   }
 
+  .introduction-text{
+    padding-right: 5vw;
+  }
+
+
+  .introduction-right-side {
+    max-width: 50%;
+  }
   .introduction-text {
     display: flex;
     flex-direction: column;
     text-align: right;
-    margin-right: 100px;
   }
 
   .hello {
     font-family: "Montserrat";
     font-size: 64px;
+    line-height: 64px;
   }
 
   .font {
     font-family: 'Baloo';
-    font-size: 128px;
+    font-size: 8vw;
+    line-height: 100px;
+    display: inline;
   }
 
-  span {
-    margin: 0;
-    padding: 0;
-  }
-
- 
+  
 
   .header-text {
-    display: flex;
+    display: inline-block;
     gap: 30px;
-    margin-right: 100px;
     cursor: pointer;
+    display: inline;
+    padding-right: 5vw;
   }
 
   .header-link {
@@ -69,34 +77,78 @@
    }
   }
 
-  .michael {
-    height: 90vh;
-    width: 30vw;
-    margin-left: 100px;
+  .img-container {
+    display: flex;
+    max-height: 50%;
+    width: 50%;
+    align-items: flex-end;
   }
+
+  .michael {
+    width: 100%;
+    height: 100%;
+    padding-left: 5vw;
+  }
+
+  
 
   .header-picture {
-  width: 64px;
-  height: 69px;
+    width: auto;
+    height: 60%;
+    padding-left: 5vw;
   }
 
-  .scroll-and-icons {
+  .scroll-and-bar {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    height: 64%;
+
   }
 
   .scroll {
+    position: absolute;
     font-family: "Montserrat";
     font-size: 23px;
+    bottom: 340px;
+  }
+
+  .bar-and-icons {
+    display:flex;
   }
 
   .blue-bar {
+    position: absolute;
     height: 330px;
     background-color: #5988FF;
     width: 2px;
     margin-top: 10px;
+    bottom: 0;
+  }
+
+  .icons {
+    display: flex;
+    position: absolute;
+    gap: 25px;
+    flex-direction: column;
+    right: 5vw;
+    top: 789px;
+  }
+
+  .icon {
+    border-radius: 17px;
+    &:hover,:focus {
+      cursor: pointer;
+      animation: pulse 0.2s;
+  box-shadow: 0 0 0 1em #5988FF;
+  border-radius: 50% solid transparent;
+    }
+  }
+
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 var(--hover); }
   }
 
 
