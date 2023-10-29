@@ -1,0 +1,9 @@
+<div class="skill-set">
+<span class="skill-set-heading">Skill set</span>
+<div class="skillcontainer">
+    <div class="skill"  *ngFor="let skill of skills; index as i">
+        <img class="skill-img" src="/assets/img/{{skill['skill-pic']}}">
+        <span>{{skill['skill-name']}}</span>
+    </div>
+</div>
+</div>

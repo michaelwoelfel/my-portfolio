@@ -1,0 +1,72 @@
+
+.skill-set {
+    height: 632px;
+    background-image: url("/assets/img/blue-background.png");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.skill-set-heading {
+    font-family: 'Baloo';
+    font-size: 96px;
+    line-height: 96px;
+    color: white;
+}
+
+.skillcontainer {
+    height: 340px;
+    width: 70%;
+    display: flex;
+    gap: 150px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 7vw;
+    margin-right: 7vw;
+}
+
+.skill-img {
+    &:hover {
+        animation: bounce 0.7s;
+    }
+
+    
+}
+
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-30px);
+		-ms-transform:     translateY(-30px);
+		transform:         translateY(-30px)
+	}
+	60% {
+		-webkit-transform: translateY(-15px);
+		-ms-transform:     translateY(-15px);
+		transform:         translateY(-15px)
+	}
+}
+
+.skill {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    &:hover {
+        cursor:pointer;
+      
+    }
+}

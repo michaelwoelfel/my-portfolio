@@ -1,0 +1,40 @@
+.mywork-container {
+display: flex;
+width: 100%;
+flex-direction: column;
+}
+
+.heading {
+display: flex;
+flex-direction: column;
+width: 50%;
+align-items: flex-start;
+padding-left: 5vw;
+padding-top: 5vw;
+}
+
+.mywork {
+    font-family: 'Baloo';
+    font-size: 7em;
+    color: #5988FF;
+}
+
+.sample {
+font-family: 'Montserrat';
+font-size: 23px;
+max-width: 673px;
+}
+
+.bubble {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 40%;
+    top: 2200px;
+}
+
+.bubble2 {
+    position: absolute;
+    right:10%;
+    top: 2300px;
+}
