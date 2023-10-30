@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LetsWorkComponent } from './lets-work/lets-work.component';
 import { SkillSetComponent } from './skill-set/skill-set.component';
 import { MyWorkComponent } from './my-work/my-work.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MyWorkComponent } from './my-work/my-work.component';
     HeaderComponentComponent,
     LetsWorkComponent,
     SkillSetComponent,
-    MyWorkComponent
+    MyWorkComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
