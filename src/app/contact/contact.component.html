@@ -1,1 +1,27 @@
-<p>contact works!</p>
+<div class="contact-heading"><span class="contact">Contact</span></div>
+<div class="contact-container">
+    <div class="left-side">
+        <span class="text-heading">Got a problem to solve?</span>
+        <span class="text">Contact m through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</span>
+        <div><span class="text-footer">Need a Fullstack Developer?</span><span class="footer-contact-span">Contact me!</span></div>
+    </div>
+    <div class="right-side">
+        <form class="form-right-side" [formGroup]="emailForm" (ngSubmit)="onSubmitForm()">
+            <mat-form-field class="form-field">
+                <mat-label  class="form-field">Your name</mat-label>
+                <input  class="form-field" class="placeholder" matInput placeholder ="Your Name" [formControl]="name" required>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Your email</mat-label>
+                <input matInput placeholder="Your e-mail" [formControl]="email" required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Your message</mat-label>
+                <textarea matInput placeholder="Hi Michael, i want to work with you in a new project, when do you have time for a meeting ?"[formControl]="message" required></textarea>
+            </mat-form-field>
+            <mat-checkbox   [formControl]="disableSelect" class="privacy-policy">I've read the <a v href="#">privacy policy</a> and agree to the processing of my data as outlined.</mat-checkbox>
+            <button matNativeControl [disabled]="!disableSelect.value"  class="button"mat-raised-button type="submit" color="primary">Say hello ;)</button>
+        </form>
+    </div>
+</div>

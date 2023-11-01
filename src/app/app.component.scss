@@ -10,3 +10,15 @@ body{
   width: 15vw;
   transform: translate(-50%, -50%);
 }
+
+
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #fff!important;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  border-radius: 4px;
+  background-color: #fff!important;
+  padding: 0.75em 0.75em 0 0.75em;
+  border: 1px solid #f94747;
+}

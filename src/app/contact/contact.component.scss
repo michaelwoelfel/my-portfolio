@@ -1,0 +1,228 @@
+.contact-heading {
+   max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 5vw;
+    padding-top: 10vh;
+    font-family: 'Baloo';
+    font-size: 7em;
+  
+    color: #5988FF;
+    background-color: #FBFCFF;
+}
+
+.contact-container {
+    padding-top: 10vh;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    gap: 5vw;
+    background-color: #FBFCFF;
+    padding-bottom: 10vh;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vw;
+    width: 50%;
+    gap: 20px;
+}
+
+.right-side {
+    width: 50%;
+    margin-right: 5vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    background-color: #FBFCFF;
+}
+
+
+.text {
+    font-family: 'Montserrat';
+    font-size: 16px;
+}
+
+.text-heading {
+    font-family: 'Baloo';
+    color: #5988FF;
+    font-size: 3.5em;
+    line-height: 40px
+}
+
+.text-footer {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    color: #5988FF;
+}
+
+.footer-contact-span {
+    font-family: 'Baloo';
+    color: #5988FF;
+    font-size: 16px;
+}
+
+button{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+    color: #BBBBBB;
+    border: 2px solid #BBBBBB;
+    &:hover:not([disabled]) {
+        box-shadow: inset 250px 0 0 0 #5988FF;
+
+        background-color: #5988FF;
+        transform: scale(1.1);
+        color: #fff!important;
+        border: none;
+    }
+    }
+
+    button:not([disabled]){
+        color: #5988FF!important;
+        border: 2px solid #5988FF!important;
+
+    }
+
+  
+
+    ::ng-deep input {
+        color: #5988FF;
+    }
+
+
+
+    
+
+    ::ng-deep .mdc-checkbox .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate=true])~.mdc-checkbox__background {
+        border-color: #5988FF!important;
+        
+    }
+
+
+
+
+
+
+::ng-deep .mat-mdc-form-field  {
+    width: 100%;
+    background-color: white!important;
+   padding: 0!important;
+   margin:0!important;
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+    
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 20px;
+}
+
+
+form {
+    max-height: 100%;
+    width: 100%;
+}
+
+
+::ng-deep .mdc-checkbox .mdc-checkbox__native-control:enabled~.mdc-checkbox__background .mdc-checkbox__checkmark {
+    color:#5988FF!important;
+}
+
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    color: black !important;
+    border: 2px solid transparent;
+    outline: 1px solid #5988FF!important;
+    border-radius: 10px;
+    background-clip: content-box;
+    background-color: white!important;
+    width: 100%!important;
+    height: 100%!important;
+    margin-left: 5px!important;
+   padding-left: 10px!important;
+
+    &:hover {
+        outline-width: 3px!important;
+        cursor: pointer;
+    }
+}
+
+
+:ng-deep .mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background {
+    background-color: #FBFCFF!important;
+}
+
+
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+    margin-top: 5px;
+ 
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    background-color: #FBFCFF;
+    
+
+}
+
+::ng-deep .mat-mdc-form-field-focus-overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: white!important;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+::ng-deep .mat-mdc-checkbox .mdc-form-field {
+color: black!important;
+}
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-floating-label,
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-floating-label--float-above {
+    color: black!important;
+}
+
+
+::ng-deep .mdc-text-field--filled.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-floating-label, .mdc-text-field--filled.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-floating-label--float-above {
+    color: red!important;
+}
+
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    color: black!important;
+    font-size: 16px!important;
+}
+
+
+.privacy {
+    color:#5988FF;
+}
+
+
+
+
+
+::ng-deep input::placeholder {
+    color: #BEBEBF!important;
+   }
+
+   ::ng-deep textarea::placeholder {
+    color: #BEBEBF!important;
+   }
+
