@@ -2,6 +2,7 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Component, VERSION, } from "@angular/core";
 import { FormBuilder, FormGroup, FormControl, Validators, } from "@angular/forms";
+import { BreakpointObserver,Breakpoints, BreakpointState } from '@angular/cdk/layout';
 
 interface EmailData {
   name: string | null;
@@ -21,8 +22,9 @@ export class ContactComponent {
   secretKey: string = "xeqbdjnq";
   emailForm: FormGroup;
  
+ 
 
-  constructor(private fb: FormBuilder, private httpClient: HttpClient) {
+  constructor(private fb: FormBuilder, private httpClient: HttpClient,public responsive: BreakpointObserver) {
     this.emailForm = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
       name: new FormControl('', [Validators.required, Validators.minLength(5),]),
@@ -31,6 +33,9 @@ export class ContactComponent {
     });
   }
 
+
+  
+  
 
   onSubmitForm() {
     let emailData: EmailData = this.emailForm.value as EmailData;

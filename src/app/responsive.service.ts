@@ -1,17 +1,15 @@
-import { Component } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+@Injectable({
+  providedIn: 'root'
 })
-export class AppComponent {
-  title = 'my-portfolio';
+export class ResponsiveService {
+
+  constructor(public responsive: BreakpointObserver) { }
+
   hideMobile = true;
 
-  constructor(public responsive: BreakpointObserver) {}
-  
   ngOnInit() {
     const customBreakpoint = '(max-width: 1050px)';
 

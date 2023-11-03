@@ -8,6 +8,16 @@
     color: #5988FF;
   }
 
+  .nav-menu {
+    background-color: red;
+  }
+
+  .mat-sidenav-content {
+    background-color: red;
+  }
+
+ 
+
   .header-menu {
     height: 10%;
     display: flex;
@@ -147,10 +157,49 @@
   }
 
 
+  .center {
+    top: 50px;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 50px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+  .center:before,
+  .center:after,
+  .center div {
+    background:  #5988FF;
+    content: "";
+    display: block;
+    height: 3px;
+    border-radius: 3px;
+    margin: 15px 0;
+    transition: 0.2s;
+  }
+  .center:hover:before {
+    transform: translateY(18px) rotate(135deg);
+  }
+  .center:hover:after {
+    transform: translateY(-18px) rotate(-135deg);
+  }
+  .center:hover div {
+    transform: scale(0);
+  }
+  
+
   @keyframes pulse {
     0% { box-shadow: 0 0 0 0 var(--hover); }
   }
 
+  @media only screen and (max-width: 1050px) {
+   .header-text{
+      display: none;
+    }
+  }
 
 
 

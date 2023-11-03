@@ -17,6 +17,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
 import { FooterComponent } from './footer/footer.component';
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule} from '@angular/material/button';
+import { MatIconModule} from '@angular/material/icon';
 
 
 
@@ -42,7 +48,13 @@ import { FooterComponent } from './footer/footer.component';
     MatFormFieldModule,
     MatCheckboxModule,
     MatSelectModule,
-    
+    FlexLayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatButtonModule,
+    MatIconModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

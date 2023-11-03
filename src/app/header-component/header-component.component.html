@@ -1,7 +1,10 @@
+
 <div class="header">
     <div class="header-menu">
-
         <img class="header-picture" src="assets/img/Group.png">
+        <div class="center"  *ngIf="responsiveService.hideMobile">
+          <div></div>
+        </div>
         <div class="header-text"><a href="#" class="header-link">About me</a><a href="#" class="header-link"> Skill
                 set</a><a href="#" class="header-link">My work</a></div>
     </div>
