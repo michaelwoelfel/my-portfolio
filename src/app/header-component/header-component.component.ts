@@ -8,7 +8,17 @@ import { ResponsiveService } from '../responsive.service';
   styleUrls: ['./header-component.component.scss']
 })
 export class HeaderComponentComponent {
-contructor(private responsiveService: ResponsiveService) {
+hideMobile:boolean = true;
 
+constructor(public responsiveService: ResponsiveService) {
 }
+ 
+
+  ngOnInit() {
+    this.responsiveService.hideMobile.subscribe(value =>  {
+      this.hideMobile = value;
+      console.log(value);
+    });
+}
+
 }

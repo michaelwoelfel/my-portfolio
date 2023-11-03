@@ -1,27 +1,24 @@
 import { Injectable } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ResponsiveService {
-
-  constructor(public responsive: BreakpointObserver) { }
-
-  hideMobile = true;
-
-  ngOnInit() {
-    const customBreakpoint = '(max-width: 1050px)';
+  hideMobile = new BehaviorSubject<boolean>(true);
+  constructor(public responsive: BreakpointObserver) { 
+    const customBreakpoint = '(min-width: 1050px)';
 
     this.responsive.observe(customBreakpoint)
       .subscribe((state: BreakpointState) => {
         if (state.matches) {
-          console.log('Viewport is 1050px or smaller.');
-          this.hideMobile = false;
+          this.hideMobile.next(false);
+          console.log(this.hideMobile);
         } else {
-          // Logic when viewport is larger than 1050px, if needed.
-          this.hideMobile = true;
+          this.hideMobile.next(true);
         }
       });
   }
+
 }
