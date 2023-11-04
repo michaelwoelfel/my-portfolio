@@ -1,12 +1,13 @@
 body{
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 .blue-bubble {
     position: absolute;
   top: 1010px;
   left: 50%;
-  z-index: 2;
+  z-index: 1;
   width: 15vw;
   transform: translate(-50%, -50%);
 }
@@ -22,3 +23,31 @@ body{
   padding: 0.75em 0.75em 0 0.75em;
   border: 1px solid #f94747;
 }
+
+
+.fadeOut {
+  animation-name: fade-out;
+  animation-duration: 0.5s;
+ 
+}
+
+@keyframes blend-in {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 0.9;
+  }
+}
+
+@keyframes fade-out {
+  from {
+      opacity: 0.9;
+  }
+
+  to {
+      opacity: 0;
+  }
+}
+

@@ -19,7 +19,7 @@
 }
 
 .right-side {
-   
+
     padding-right: 5vw;
     height: 252px;
     display: flex;
@@ -43,7 +43,7 @@
 .contact-button {
     position: absolute;
     top: 1400px;
-    padding: 10px;
+    padding: 10px 20px;
     color: #5988FF;
     border: 2px solid #5988FF;
     border-radius: 10px;
@@ -51,10 +51,17 @@
     align-items: center;
     justify-content: center;
     font-size: 23px;
-text-decoration: none;
-transition: color .2s ease-in-out, box-shadow .2s ease-in-out;
-&:hover {
-   box-shadow: inset 250px 0 0 0 #5988FF;
-   color: white;
-}
+    text-decoration: none;
+    transition: background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+
+    &:hover {
+        box-shadow: inset 250px 0 0 0 #5988FF;
+        background-color: #5988FF;
+        transform: scale(1.1);
+        color: #fff;
+    }
 }

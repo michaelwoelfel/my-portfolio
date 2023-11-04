@@ -7,6 +7,8 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ResponsiveService {
   hideMobile = new BehaviorSubject<boolean>(true);
+  public isVisited = false;
+
   constructor(public responsive: BreakpointObserver) { 
     const customBreakpoint = '(min-width: 1050px)';
 
@@ -20,5 +22,10 @@ export class ResponsiveService {
         }
       });
   }
+
+  public checkVisited() {
+    console.log("is visited", + this.isVisited)
+    this.isVisited = !this.isVisited;
+ }
 
 }

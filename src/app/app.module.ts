@@ -23,6 +23,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule} from '@angular/material/button';
 import { MatIconModule} from '@angular/material/icon';
+import { RespMenuComponent } from './resp-menu/resp-menu.component';
 
 
 
@@ -36,6 +37,7 @@ import { MatIconModule} from '@angular/material/icon';
     MyWorkComponent,
     ContactComponent,
     FooterComponent,
+    RespMenuComponent,
   
   ],
   imports: [

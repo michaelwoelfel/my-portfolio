@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { ResponsiveService } from './responsive.service';
+
 
 @Component({
   selector: 'app-root',
@@ -8,22 +9,14 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 })
 export class AppComponent {
   title = 'my-portfolio';
-  hideMobile = true;
-
-  constructor(public responsive: BreakpointObserver) {}
-  
-  ngOnInit() {
-    const customBreakpoint = '(max-width: 1050px)';
-
-    this.responsive.observe(customBreakpoint)
-      .subscribe((state: BreakpointState) => {
-        if (state.matches) {
-          console.log('Viewport is 1050px or smaller.');
-          this.hideMobile = false;
-        } else {
-          // Logic when viewport is larger than 1050px, if needed.
-          this.hideMobile = true;
-        }
-      });
+  hideMobile = true; 
+  constructor(public responsiveService:ResponsiveService) {
+    
   }
+  ngOnInit() {
+    this.responsiveService.hideMobile.subscribe(value =>  {
+      this.hideMobile = value;
+      console.log(value);
+    });
+}
 }

@@ -1,12 +1,14 @@
 
 <div class="header">
-    <div class="header-menu">
+    <div id="header" class="header-menu">
         <img class="header-picture" src="assets/img/Group.png">
-        <div class="center"  *ngIf="this.hideMobile">
+        <div class="nav-button" [class.visited] = "this.responsiveService.isVisited == true"
+        (click) = "this.responsiveService.checkVisited()"  *ngIf="this.hideMobile">
           <div></div>
         </div>
-        <div *ngIf="!this.hideMobile" class="header-text"><a href="#" class="header-link">About me</a><a href="#" class="header-link"> Skill
-                set</a><a href="#" class="header-link">My work</a></div>
+        <div *ngIf="!this.hideMobile" class="header-text"><a 
+            href="#lets-work" class="header-link">About me</a><a href="#skill-set"  class="header-link"> Skill
+                set</a><a href="#my-work" class="header-link">My work</a></div>
     </div>
     <div class="introduction">
         <div class="img-container">
@@ -23,7 +25,7 @@
                 <div class="blue-bar"></div>
                 <div class="icons">
                     <a href="#"><img class="icon" src="assets/img/github.png"></a>
-                    <a href="#"><img class="icon" src="assets/img/mail.png"></a>
+                    <a href="#contact"><img class="icon" src="assets/img/mail.png"></a>
                     <a href="#"><img class="icon" src="assets/img/linkedin.png"></a>
                 </div>
             </div>
