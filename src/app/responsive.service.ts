@@ -10,7 +10,7 @@ export class ResponsiveService {
   public isVisited = false;
 
   constructor(public responsive: BreakpointObserver) { 
-    const customBreakpoint = '(min-width: 1050px)';
+    const customBreakpoint = '(min-width: 900px)';
 
     this.responsive.observe(customBreakpoint)
       .subscribe((state: BreakpointState) => {

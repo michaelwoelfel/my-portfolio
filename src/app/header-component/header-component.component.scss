@@ -1,7 +1,7 @@
 .header {
   position: relative;
     background-image: url("/assets/img/hero-bg.png");
-    height: 1010px;
+    height: auto;
     max-width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,6 +24,7 @@
     justify-content: space-between;
     align-items: center;
     font-family: "Montserrat";
+    padding-top: 30px;
   
   }
 
@@ -35,11 +36,17 @@
 
   .introduction-text{
     padding-right: 5vw;
+    padding-top: 20%;
+   
   }
 
 
   .introduction-right-side {
     max-width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .introduction-text {
     display: flex;
@@ -49,15 +56,22 @@
 
   .hello {
     font-family: "Montserrat";
-    font-size: 64px;
-    line-height: 64px;
+    font-size: 4vw;
+    line-height: 5vw;
+    white-space: nowrap;
   }
 
   .font {
     font-family: 'Baloo';
-    font-size: 8vw;
-    line-height: 100px;
+    font-size: 7vw;
+    line-height: 6vw;
     display: inline;
+  }
+
+  .font-developer {
+    font-family: 'Baloo';
+    font-size: 7vw;
+    line-height: 6vw;
   }
 
   
@@ -67,7 +81,7 @@
     gap: 30px;
     cursor: pointer;
     display: inline;
-    padding-right: 5vw;
+    padding-right: 6vw;
   }
 
   .header-link {
@@ -142,8 +156,8 @@
     position: absolute;
     gap: 25px;
     flex-direction: column;
-    right: 5vw;
-    top: 789px;
+   right: 5vw;
+    bottom: 5vw;
   }
 
   .icon {
@@ -163,14 +177,14 @@
     transform: translate(-50%, -50%);
     position: absolute;
     z-index: 10!important;
-
     align-items: center;
-    width: 50px;
+    width: 40px;
     height: 50px;
     &:hover {
       cursor: pointer;
       border-radius: 50%;
-      background: rgba(51, 170, 51, .1)    /*  10% opaque green */ 
+    
+      box-shadow: 0px 0px 20px 3px #5988FF;
     }
   }
   
@@ -179,20 +193,21 @@
   .nav-button div {
     background:  #5988FF;
     content: "";
-    display: block;
+    display: flex;
     height: 3px;
     border-radius: 3px;
-    margin: 15px 0;
+    margin: 11px 0;
     transition: 0.2s;
   }
   .nav-button:hover:before {
-    transform: translateY(18px) rotate(135deg);
+    transform: translateY(14px) rotate(135deg);
   }
   .nav-button:hover:after {
-    transform: translateY(-18px) rotate(-135deg);
+    transform: translateY(-14px) rotate(-135deg);
   }
   .nav-button:hover div {
     transform: scale(0);
+    
   }
   
 
@@ -205,6 +220,14 @@
   }
 
 
+  @media only screen and (max-width: 1050px) {
+    header {
+      background-size: contain;
+      background-size: repeat;
+      
+  }
+
+}
 
   
   
