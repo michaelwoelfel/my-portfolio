@@ -6,10 +6,16 @@
     padding-top: 10vh;
     font-family: 'Baloo';
     font-size: 7em;
-  
+    height: auto;
     color: #5988FF;
     background-color: #FBFCFF;
 }
+
+.go-up-button {
+    position: absolute;
+  top: 540vh;
+    left: 5vw;
+   }
 
 .contact-container {
     padding-top: 10vh;
@@ -88,6 +94,8 @@ button{
         color: #fff!important;
         border: none;
     }
+
+
     }
 
     button:not([disabled]){
@@ -214,16 +222,11 @@ color: black!important;
     color: red;
 }
 
-
 .mat-mdc-raised-button.mat-unthemed 
 
 .privacy {
     color:#5988FF;
 }
-
-
-
-
 
 ::ng-deep input::placeholder {
     color: #BEBEBF!important;
@@ -231,5 +234,17 @@ color: black!important;
 
    ::ng-deep textarea::placeholder {
     color: #BEBEBF!important;
+   }
+
+  
+
+   .bubble-container {
+    display: flex;
+    padding-top: 1vh;
+    width: 100%;
+    justify-content: center;
+   }
+   .bubble_1 {
+    width: 200px;
    }
 

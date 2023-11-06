@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Component, VERSION, } from "@angular/core";
 import { FormBuilder, FormGroup, FormControl, Validators, } from "@angular/forms";
 import { BreakpointObserver,Breakpoints, BreakpointState } from '@angular/cdk/layout';
-
+import { ResponsiveService } from "../responsive.service";
 interface EmailData {
   name: string | null;
   email: string | null;
@@ -24,7 +24,7 @@ export class ContactComponent {
  
  
 
-  constructor(private fb: FormBuilder, private httpClient: HttpClient,public responsive: BreakpointObserver) {
+  constructor(private fb: FormBuilder, private httpClient: HttpClient,public responsive: BreakpointObserver, public responsiveService: ResponsiveService) {
     this.emailForm = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
       name: new FormControl('', [Validators.required, Validators.minLength(5),]),

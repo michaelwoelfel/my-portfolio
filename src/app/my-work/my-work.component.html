@@ -1,6 +1,7 @@
 <div class="mywork-container">
-    <img class="bubble" src="assets/img/circlesmall.png">
+   
     <img class="bubble2" src="assets/img/bubble-mywork.png">
+    <img class="bubble-pollo" src="assets/img/bubble_my_work_1.png">
     <div class="heading"><span class="mywork">My work</span><span class="sample">This page is a sample of my work -
             please feel free to try them out.</span></div>
             <div class="project-container" *ngFor="let project of projects; index as i" [ngClass]="{'row-reverse': i % 2 !== 0}">
@@ -11,5 +12,7 @@
                     <span class="project-description">{{project.description}}</span>
                     <a class="github-button" href="#">Github</a>
                 </div>
+                <img class="bubble-work" src="assets/img/circlesmall.png">
+               
             </div>
 </div>

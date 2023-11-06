@@ -24,6 +24,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule} from '@angular/material/button';
 import { MatIconModule} from '@angular/material/icon';
 import { RespMenuComponent } from './resp-menu/resp-menu.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { ImpressComponent } from './impress/impress.component';
 
 
 
@@ -38,6 +40,8 @@ import { RespMenuComponent } from './resp-menu/resp-menu.component';
     ContactComponent,
     FooterComponent,
     RespMenuComponent,
+    PrivacyComponent,
+    ImpressComponent,
   
   ],
   imports: [

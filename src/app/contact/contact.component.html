@@ -3,7 +3,8 @@
     <div class="left-side">
         <span class="text-heading">Got a problem to solve?</span>
         <span class="text">Contact m through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</span>
-        <div><span class="text-footer">Need a Fullstack Developer?</span><span class="footer-contact-span">Contact me!</span></div>
+        <div><span class="text-footer">Need a Fullstack Developer?</span><span class="footer-contact-span">Contact me !</span></div>
+       <div class="bubble-container"> <img class="bubble_1" src="assets/img/contact_bubble_2.png"></div>
     </div>
     <div class="right-side">
         <form class="form-right-side" [formGroup]="emailForm" (ngSubmit)="onSubmitForm()">
@@ -20,9 +21,10 @@
                 <mat-label>Your message</mat-label>
                 <textarea matInput placeholder="Hi Michael, i want to work with you in a new project, when do you have time for a meeting ?"[formControl]="message" required></textarea>
             </mat-form-field>
-            <mat-checkbox   [formControl]="disableSelect" class="privacy-policy">I've read the <a v href="#">privacy policy</a> and agree to the processing of my data as outlined.</mat-checkbox>
+            <mat-checkbox   [formControl]="disableSelect" class="privacy-policy">I've read the <a  (click)="this.responsiveService.checkHideContent()" routerLink="privacy-component" routerLinkActive="active">privacy policy</a> and agree to the processing of my data as outlined.</mat-checkbox>
             <button matNativeControl [disabled]="!disableSelect.value"  class="button"mat-raised-button type="submit" >Say hello ;)</button>
         </form>
-        <a href="#header"><img  src="assets/img/Go up button s2.png"></a>
+   
         </div>
+        <a class="go-up-button" href="#header"><img  src="assets/img/Go up button s2.png"></a>
 </div>
