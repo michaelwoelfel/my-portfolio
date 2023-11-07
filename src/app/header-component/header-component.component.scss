@@ -1,3 +1,5 @@
+@import 'aos/dist/aos.css';
+
 .header {
   position: relative;
     background-image: url("/assets/img/hero-bg.png");
@@ -220,13 +222,61 @@
   }
 
 
-  @media only screen and (max-width: 1050px) {
-    header {
-      background-size: contain;
-      background-size: repeat;
-      
+  @media only screen and (max-width: 950px) {
+    .header {
+      background-image: url("/assets/img/background-resp.png")!important;
+      background-size: cover;
   }
 
+  .scroll-and-bar {
+    display: none;
+  }
+
+  .michael {
+    padding: 0;
+    width: 100%;
+  }
+
+  .introduction-text {
+    padding-right: 0;
+    font-size: 20vw;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .img-container {
+    height: 80vh;
+    width: 80%;
+  }
+
+  .hello {
+    font-size: 6vw;
+  }
+
+  .font {
+    font-size: 10vw;
+  }
+
+  .font-developer
+  {
+    font-size: 10vw;
+  }
+
+  .introduction {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow-x: hidden;
+  }
+
+  @media only screen and (max-width: 650px) {
+   .header {
+    background-size: contain;
+   }
+  }
 }
 
   

@@ -1,6 +1,6 @@
 
 .skill-set {
-    height: 632px;
+    height: auto;
     background-image: url("/assets/img/blue-background.png");
     width: 100%;
     background-repeat: no-repeat;
@@ -10,6 +10,8 @@
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .skill-set-heading {
@@ -20,7 +22,7 @@
 }
 
 .skillcontainer {
-    height: 340px;
+    height: auto;
     width: 70%;
     display: flex;
     gap: 150px;
@@ -70,3 +72,30 @@
       
     }
 }
+
+    @media only screen and (max-width: 450px) {
+        .skill-set-heading {
+            font-size: 20vw;
+            padding-left: 5vw;
+            padding-right: 5vw;
+    }
+}
+
+    @media only screen and (max-width: 750px) {
+        .skillcontainer {
+            gap: 100px;
+        }
+    }
+
+    @media only screen and (max-width: 620px) {
+        .skillcontainer {
+            gap: 50px;
+        }
+    }
+
+    @media only screen and (max-width: 460px) {
+        .skillcontainer {
+            gap: 25px;
+        }
+    }
+

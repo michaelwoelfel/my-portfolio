@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-my-work',
@@ -6,7 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-work.component.scss']
 })
 export class MyWorkComponent {
-
+  ngOnInit() {
+    AOS.init();
+   
+}
 
   projects = [
 

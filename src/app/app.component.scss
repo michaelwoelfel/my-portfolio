@@ -1,3 +1,5 @@
+@import 'aos/dist/aos.css';
+
 body{
     margin: 0;
     scroll-behavior: smooth;
@@ -8,7 +10,7 @@ body{
   top: 0px;
   left: 50%;
   z-index: 1;
-  width: 15vw;
+  width: 20vw;
   transform: translate(-50%, -50%);
 }
 

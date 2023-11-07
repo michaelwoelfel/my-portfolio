@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ResponsiveService } from './responsive.service';
+import AOS from 'aos';
 
 
 @Component({
@@ -14,6 +15,7 @@ export class AppComponent {
     
   }
   ngOnInit() {
+    AOS.init();
     this.responsiveService.hideMobile.subscribe(value =>  {
       this.hideMobile = value;
       console.log(value);
