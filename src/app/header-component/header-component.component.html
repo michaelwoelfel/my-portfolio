@@ -2,7 +2,7 @@
 <div class="header">
     <div id="header" class="header-menu">
         <img class="header-picture" src="assets/img/Group.png">
-        <div class="nav-button" [class.visited] = "this.responsiveService.isVisited == true"
+        <div class="nav-button" [class.visited] = "responsiveService.isVisited | async"
         (click) = "this.responsiveService.checkVisited()"  *ngIf="this.hideMobile">
           <div></div>
         </div>
@@ -21,8 +21,8 @@
                 <span class="font-developer">DEVELOPER</span>
             </div>
             <div class="scroll-and-bar">
-                <span class="scroll">SCROLL</span>
-                <div class="blue-bar"></div>
+                <span data-aos="fade-down" data-aos-duration="2000" class="scroll">SCROLL</span>
+                <div data-aos="fade-down"  data-aos-duration="2000"class="blue-bar"></div>
                 <div class="icons">
                     <a href="https://github.com/michaelwoelfel/"><img class="icon" src="assets/img/github.png"></a>
                     <a href="#contact"><img class="icon" src="assets/img/mail.png"></a>

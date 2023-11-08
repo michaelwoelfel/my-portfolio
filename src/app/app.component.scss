@@ -1,9 +1,14 @@
 @import 'aos/dist/aos.css';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     scroll-behavior: smooth;
 }
+
 
 .blue-bubble {
     position: relative;
@@ -13,6 +18,7 @@ body{
   width: 25vw;
   transform: translate(-50%, -50%);
 }
+
 
 
 

@@ -2,95 +2,96 @@
 
 .header {
   position: relative;
-    background-image: url("/assets/img/hero-bg.png");
-    height: auto;
-    max-width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #5988FF;
-    position: relative;
-  }
+  background-image: url("/assets/img/hero-bg.png");
+  height: auto;
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #5988FF;
+  position: relative;
+}
 
-  .nav-menu {
-    background-color: red;
-  }
+.nav-menu {
+  background-color: red;
+}
 
-  .mat-sidenav-content {
-    background-color: red;
-  }
-
- 
-
-  .header-menu {
-    height: 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: "Montserrat";
-    padding-top: 30px;
-  
-  }
-
-  .introduction {
-    max-height: 90%;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .introduction-text{
-    padding-right: 5vw;
-    padding-top: 20%;
-   
-  }
+.mat-sidenav-content {
+  background-color: red;
+}
 
 
-  .introduction-right-side {
-    max-width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .introduction-text {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-  }
 
-  .hello {
-    font-family: "Montserrat";
-    font-size: 4vw;
-    line-height: 5vw;
-    white-space: nowrap;
-  }
+.header-menu {
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat";
+  padding-top: 30px;
 
-  .font {
-    font-family: 'Baloo';
-    font-size: 7vw;
-    line-height: 6vw;
-    display: inline;
-  }
+}
 
-  .font-developer {
-    font-family: 'Baloo';
-    font-size: 7vw;
-    line-height: 6vw;
-  }
+.introduction {
+  max-height: 90%;
+  display: flex;
+  justify-content: space-between;
+}
 
-  
+.introduction-text {
+  padding-right: 10vh;
+  padding-top: 20%;
 
-  .header-text {
-    display: inline-block;
-    gap: 30px;
-    cursor: pointer;
-    display: inline;
-    padding-right: 6vw;
-  }
+}
 
-  .header-link {
-   font-size: 23px;
-   text-decoration: none;
-   box-shadow: inset 0 0 0 0 #5988FF;
+
+.introduction-right-side {
+  max-width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.introduction-text {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.hello {
+  font-family: "Montserrat";
+  font-size: 4vw;
+  line-height: 9vh;
+  white-space: nowrap;
+}
+
+.font {
+  font-family: 'Baloo';
+  font-size: 6vw;
+  line-height: 5vw;
+  display: inline;
+}
+
+.font-developer {
+  font-family: 'Baloo';
+  font-size: 7vw;
+  line-height: 6vw;
+}
+
+
+
+.header-text {
+  display: inline-block;
+  gap: 30px;
+  cursor: pointer;
+  display: inline;
+  padding-right: 6vw;
+}
+
+.header-link {
+  font-size: 23px;
+  text-decoration: none;
+  box-shadow: inset 0 0 0 0 #5988FF;
   color: #5988FF;
   padding-left: 10px;
   padding-right: 10px;
@@ -98,135 +99,149 @@
   padding-bottom: 3px;
   padding-top: 3px;
   transition: color .2s ease-in-out, box-shadow .2s ease-in-out;
-   &:hover {
-      box-shadow: inset 150px 0 0 0 #5988FF;
-      color: white;
-   }
+
+  &:hover {
+    box-shadow: inset 150px 0 0 0 #5988FF;
+    color: white;
   }
+}
 
-  .img-container {
-    display: flex;
-    max-height: 50%;
-    width: 50%;
-    align-items: flex-end;
-  }
+.img-container {
+  display: flex;
+  max-height: 50%;
+  width: 50%;
+  align-items: flex-end;
+}
 
-  .michael {
-    width: 100%;
-    height: 100%;
-    padding-left: 5vw;
-  }
-
-  
-
-  .header-picture {
-    width: auto;
-    height: 60px;
-    padding-left: 5vw;
-  }
-
-  .scroll-and-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    height: 64%;
-
-  }
-
-  .scroll {
-    position: absolute;
-    font-family: "Montserrat";
-    font-size: 23px;
-    bottom: 340px;
-  }
-
-  .bar-and-icons {
-    display:flex;
-  }
-
-  .blue-bar {
-    position: absolute;
-    height: 330px;
-    background-color: #5988FF;
-    width: 2px;
-    margin-top: 10px;
-    bottom: 0;
-  }
-
-  .icons {
-    display: flex;
-    position: absolute;
-    gap: 25px;
-    flex-direction: column;
-   right: 5vw;
-    bottom: 5vw;
-  }
-
-  .icon {
-    border-radius: 17px;
-    &:hover,:focus {
-      cursor: pointer;
-      animation: pulse 0.2s;
-  box-shadow: 0 0 0 1em #5988FF;
-  border-radius: 50% solid transparent;
-    }
-  }
+.michael {
+  width: 100%;
+  height: 100%;
+  padding-left: 10vh;
+}
 
 
-  .nav-button {
-    top: 50px;
-   right: 5vw;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    z-index: 10!important;
-    align-items: center;
-    width: 40px;
-    height: 50px;
-    &:hover {
-      cursor: pointer;
-      border-radius: 50%;
-    
-      box-shadow: 0px 0px 20px 3px #5988FF;
-    }
-  }
-  
-  .nav-button:before,
-  .nav-button:after,
-  .nav-button div {
-    background:  #5988FF;
-    content: "";
-    display: flex;
-    height: 3px;
-    border-radius: 3px;
-    margin: 11px 0;
-    transition: 0.2s;
-  }
-  .nav-button:hover:before {
-    transform: translateY(14px) rotate(135deg);
-  }
-  .nav-button:hover:after {
-    transform: translateY(-14px) rotate(-135deg);
-  }
-  .nav-button:hover div {
-    transform: scale(0);
-    
-  }
-  
 
-  @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 var(--hover); }
+.header-picture {
+  width: auto;
+  height: 60px;
+  padding-left: 10vh;
+}
+
+.scroll-and-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 64%;
+
+}
+
+.scroll {
+  position: absolute;
+  font-family: "Montserrat";
+  font-size: 23px;
+  bottom: 50%;
+}
+
+.bar-and-icons {
+  display: flex;
+}
+
+.blue-bar {
+  position: absolute;
+  height: 45%;
+  background-color: #5988FF;
+  width: 2px;
+  margin-top: 20px;
+  bottom: 0;
+}
+
+.icons {
+  display: flex;
+  position: absolute;
+  gap: 25px;
+  flex-direction: column;
+  right: 10vh;
+  bottom: 10vh;
+}
+
+.icon {
+  border-radius: 17px;
+
+  &:hover,
+  :focus {
+    cursor: pointer;
+    animation: pulse 0.2s;
+    box-shadow: 0 0 0 1em #5988FF;
+    border-radius: 50% solid transparent;
   }
+}
 
-  #contact {
-    scroll-behavior: smooth;
+
+.nav-button {
+  top: 50px;
+  right: 10vh;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 10 !important;
+  align-items: center;
+  width: 40px;
+  height: 50px;
+
+  &:hover {
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 14px -3px 0px 0px #5988FF;
   }
+}
+
+.nav-button:before,
+.nav-button:after,
+.nav-button div {
+  background: #5988FF;
+  content: "";
+  display: flex;
+  height: 3px;
+  border-radius: 3px;
+  margin: 11px 0;
+  transition: 0.2s;
+}
+
+.nav-button:hover:before {
+  transform: translateY(14px) rotate(135deg);
+}
+
+.nav-button:hover:after {
+  transform: translateY(-14px) rotate(-135deg);
+}
+
+.nav-button:hover div {
+  transform: scale(0);
+
+}
 
 
-  @media only screen and (max-width: 950px) {
-    .header {
-      background-image: url("/assets/img/background-resp.png")!important;
-      background-size: cover;
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+#contact {
+  scroll-behavior: smooth;
+}
+
+
+@media only screen and (max-width: 1100px) {
+  .hello {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .header {
+    background-image: url("/assets/img/background-resp.png") !important;
+    background-size: cover;
   }
 
   .scroll-and-bar {
@@ -253,15 +268,14 @@
   }
 
   .hello {
-    font-size: 6vw;
+    font-size: 5.5vw;
   }
 
   .font {
     font-size: 10vw;
   }
 
-  .font-developer
-  {
+  .font-developer {
     font-size: 10vw;
   }
 
@@ -274,9 +288,58 @@
   }
 
   @media only screen and (max-width: 650px) {
-   .header {
-    background-size: contain;
-   }
+    .header {
+      background-size: contain;
+    }
+
+    .header-picture {
+      padding-left: 5vh;
+    }
+
+    .nav-button {
+      right: 2vw;
+      top: 60px;
+    }
+
+    .introduction-right-side{
+      width: 100%;
+    }
+
+    .hello {
+      font-size: 5vw;
+    }
+
+    .font {
+      font-size: 12vw;
+    }
+    
+    .font-developer {
+      font-size: 12vw;
+      line-height: 10vw;
+    }
+
+    .introduction-text {
+      font-size: 10vw!important;
+      width: 100%;
+      padding-left: 5vh;
+      padding-right: 5vh;;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .hello {
+    font-size: 7vw;
+  }
+
+  .font {
+    font-size: 15vw;
+    line-height: 10vw;
+  }
+
+  .font-developer {
+    font-size: 15vw;
+    
   }
 }
 
@@ -286,6 +349,3 @@
     right: 2vw;
   }
 }
-
-  
-  

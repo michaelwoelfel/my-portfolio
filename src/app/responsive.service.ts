@@ -7,11 +7,13 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ResponsiveService {
   hideMobile = new BehaviorSubject<boolean>(true);
-  public isVisited = false;
+  public hideScroll= new BehaviorSubject<boolean>(false);
+  public isVisited = new BehaviorSubject<boolean>(false);
   public hideContent = true;
+  
 
   constructor(public responsive: BreakpointObserver) { 
-    const customBreakpoint = '(min-width: 900px)';
+    const customBreakpoint = '(min-width: 1050px)';
 
     this.responsive.observe(customBreakpoint)
       .subscribe((state: BreakpointState) => {
@@ -25,12 +27,12 @@ export class ResponsiveService {
   }
 
   public checkVisited() {
-    console.log("is visited", + this.isVisited)
-    this.isVisited = !this.isVisited;
+    console.log(this.isVisited.value)
+    this.isVisited.next(!this.isVisited.value);
+    this.hideScroll.next(this.isVisited.value);
  }
 
  public checkHideContent() {
-  console.log("is visited", + this.isVisited)
   this.hideContent = !this.hideContent;
 }
 

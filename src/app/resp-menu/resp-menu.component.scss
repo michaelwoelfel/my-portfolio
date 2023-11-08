@@ -1,5 +1,9 @@
 html {
+    scroll-behavior: smooth;
+}
+body {
     overflow: hidden;
+    width:100%;
 }
 
 a {
@@ -69,8 +73,8 @@ a {
 .header-icon {
     position: absolute;
     width: 55px;
-    top: 21px;
-    left: 5vw;
+    top: 30px;
+    left: 10vh;
 }
 
 .text-container {

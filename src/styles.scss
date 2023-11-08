@@ -1,11 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'aos/dist/aos.css';
-html {
-  scroll-behavior: smooth;
-}
-  body {
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+body {
     margin: 0;
     max-width: 100%;
+  }
+
+  .block-scroll {
+    overflow: hidden;
+    width: 100%;
+    padding-right: 3vw;
+    
+   
   }
 
 

@@ -1,22 +1,24 @@
 <div class="mywork-container">
    
-    <img class="bubble2" src="assets/img/bubble-mywork.png">
-   
+    <img data-aos="zoom-in-up"  data-aos-duration="2000" class="bubble2" src="assets/img/bubble-mywork.png">
+    <img data-aos="zoom-in-up"  data-aos-duration="2000" class="bubble-mini" src="assets/img/bubble-mywork.png">
+    <img data-aos="zoom-in-up"  data-aos-duration="2000" class="bubble-work" src="assets/img/circlesmall.png">
     <div class="heading"><span class="mywork">My work</span><span class="sample">This page is a sample of my work -
             please feel free to try them out.</span></div>
             <div  class="project-container" *ngFor="let project of projects; index as i" [ngClass]="{'row-reverse': i % 2 !== 0}">
-                <div data-aos="fade-up-right" data-aos-duration="3000" class="img-container"><img class="project-img" src="assets/img/{{project.img}}"></div>
+                <div data-aos="flip-right" data-aos-duration="2000" class="img-container"><img class="project-img" src="assets/img/{{project.img}}"></div>
                 <div class="description-container" [ngClass]="{'align-right': i % 2 !== 0}">
                     <span class="project-name">{{project.title}}</span>
                     <span class="project-skills">{{project.skills}}</span>
                     <span class="project-description">{{project.description}}</span>
                     <img *ngIf="i==1" class="bubble-pollo" src="assets/img/bubble_my_work_1.png">
+                    <img *ngIf="i==0" class="bubble-join" src="assets/img/bubble_join.png">
                     <div class="button-container">
                     <a class="github-button" href="#">Github</a>
                     <a class="live-test" href="#">Live test</a>
                 </div>
                 </div>
-                <img class="bubble-work" src="assets/img/circlesmall.png">
+               
                
             </div>
 </div>

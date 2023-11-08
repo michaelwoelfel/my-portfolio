@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Renderer2 } from '@angular/core';
 import { ResponsiveService } from './responsive.service';
 import AOS from 'aos';
 
@@ -11,7 +11,8 @@ import AOS from 'aos';
 export class AppComponent {
   title = 'my-portfolio';
   hideMobile = true; 
-  constructor(public responsiveService:ResponsiveService) {
+
+  constructor(public responsiveService:ResponsiveService,private renderer: Renderer2) {
     
   }
   ngOnInit() {
@@ -19,6 +20,15 @@ export class AppComponent {
     this.responsiveService.hideMobile.subscribe(value =>  {
       this.hideMobile = value;
       console.log(value);
+    });
+
+    this.responsiveService.hideScroll.subscribe(value =>  {
+      this.responsiveService.hideScroll.value;
+      if (this.responsiveService.hideScroll.value === true) {
+        this.renderer.addClass(document.body, 'block-scroll');
+      } else {
+        this.renderer.removeClass(document.body, 'block-scroll');
+      }
     });
 }
 }
