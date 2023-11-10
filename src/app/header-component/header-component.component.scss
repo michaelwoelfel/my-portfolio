@@ -96,9 +96,9 @@
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 20px;
-  padding-bottom: 3px;
-  padding-top: 3px;
-  transition: color .2s ease-in-out, box-shadow .2s ease-in-out;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  transition: color .2s ease, box-shadow .2s ease-in-out;
 
   &:hover {
     box-shadow: inset 150px 0 0 0 #5988FF;
@@ -172,7 +172,7 @@
   :focus {
     cursor: pointer;
     animation: pulse 0.2s;
-    box-shadow: 0 0 0 1em #5988FF;
+    box-shadow: 1px 1px 20px 0em #5988FF;
     border-radius: 50% solid transparent;
   }
 }
