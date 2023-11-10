@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ResponsiveService } from '../responsive.service';
 
 @Component({
   selector: 'app-skill-set',
@@ -9,7 +10,7 @@ import { Component } from '@angular/core';
 
 
 export class SkillSetComponent {
-
+constructor(public responsiveService: ResponsiveService) {}
  
  skills = [
 
@@ -17,10 +18,10 @@ export class SkillSetComponent {
       "skill-pic": "Angular.png",
       "skill-name": "Angular",
     },
-    {
-      "skill-pic": "Typescript.png",
-      "skill-name": "Typescript",
-    },
+    // {
+    //   "skill-pic": "Typescript.png",
+    //   "skill-name": "Typescript",
+    // },
     {
       "skill-pic": "Javascript.png",
       "skill-name": "Javscript",
@@ -29,15 +30,17 @@ export class SkillSetComponent {
       "skill-pic": "HTML.png",
       "skill-name": "HMTL",
     },
+
+    // {
+    //   "skill-pic": "Material.png",
+    //   "skill-name": "Material",
+    // },
+    // {
+    //   "skill-pic": "Firebase.png",
+    //   "skill-name": "Firebase",
+    // },
     
-    {
-      "skill-pic": "scrum.png",
-      "skill-name": "Scrum",
-    },
-    {
-      "skill-pic": "Firebase.png",
-      "skill-name": "Firebase",
-    },
+   
     {
       "skill-pic": "git.png",
       "skill-name": "Git",
@@ -46,15 +49,8 @@ export class SkillSetComponent {
       "skill-pic": "CSS.png",
       "skill-name": "CSS",
     },
-    {
-      "skill-pic": "Angular.png",
-      "skill-name": "Angular",
-    },
-
-    {
-      "skill-pic": "Material.png",
-      "skill-name": "Material Design",
-    },
+   
   ]
+
 
 }

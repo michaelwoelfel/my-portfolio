@@ -2,8 +2,8 @@
 <div class="contact-container">
     <div class="left-side">
         <span class="text-heading">Got a problem to solve?</span>
-        <span class="text">Contact m through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</span>
-        <div><span class="text-footer">Need a Fullstack Developer?</span><span class="footer-contact-span">Contact me !</span></div>
+        <span class="text">Contact me through this form, ready to help you solve your problems.</span>
+        <div><span class="text-footer">Need a Developer?</span><span class="footer-contact-span"> Contact me !</span></div>
        <div class="bubble-container"> <img data-aos="zoom-in-up"  data-aos-duration="2000" class="bubble_1" src="assets/img/contact_bubble_2.png"></div>
     </div>
     <div class="right-side">
@@ -21,10 +21,11 @@
                 <mat-label>Your message</mat-label>
                 <textarea matInput placeholder="Hi Michael, i want to work with you in a new project, when do you have time for a meeting ?"[formControl]="message" required></textarea>
             </mat-form-field>
+            <div data-aos="fade-left" data-aos-duration="800" class="message-sent" *ngIf="responsiveService.messageSentSuccess.value == true">Thank you for reaching out!  I will respond as soon as possible.</div>
             <mat-checkbox   [formControl]="disableSelect" class="privacy-policy">I've read the <a  (click)="this.responsiveService.checkHideContent()" routerLink="privacy-component" routerLinkActive="active">privacy policy</a> and agree to the processing of my data as outlined.</mat-checkbox>
             <button matNativeControl [disabled]="!disableSelect.value"  class="button"mat-raised-button type="submit" >Say hello ;)</button>
         </form>
    
         </div>
-        <a  data-aos="zoom-in-up"  data-aos-duration="2000" class="go-up-button" href="#header"><img  src="assets/img/Go up button s2.png"></a>
+        <a  data-aos="zoom-in-up"  data-aos-duration="300" class="go-up-button" href="#header"><img  src="assets/img/Go up button s2.png"></a>
 </div>

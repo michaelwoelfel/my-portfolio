@@ -2,7 +2,7 @@
 
 <app-resp-menu  [ngClass]="{'fadeOut': !responsiveService.isVisited.value}"   *ngIf="this.hideMobile&&this.responsiveService.isVisited.value"></app-resp-menu>
 <app-header-component class="header" id="header"></app-header-component>
-<router-outlet  ><ng-container  *ngIf="responsiveService.hideContent" >
+<router-outlet  ><ng-container  >
     <img  class="blue-bubble" src="assets/img/circle.png">
     <app-lets-work id="lets-work"></app-lets-work>
     <app-skill-set id="skill-set"></app-skill-set>

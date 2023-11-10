@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { ResponsiveService } from '../responsive.service';
 import AOS from 'aos';
+import { count } from 'rxjs';
 
 @Component({
   selector: 'app-my-work',
@@ -7,10 +9,9 @@ import AOS from 'aos';
   styleUrls: ['./my-work.component.scss']
 })
 export class MyWorkComponent {
-  ngOnInit() {
-    AOS.init();
-   
-}
+  constructor(public responsiveService: ResponsiveService) {
+
+  }
 
   projects = [
 
@@ -31,5 +32,10 @@ export class MyWorkComponent {
    
 
   ]
+  ngOnInit() {
+    AOS.init();
+}
+
+ 
 
 }

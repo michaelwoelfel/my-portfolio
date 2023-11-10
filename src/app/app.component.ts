@@ -19,16 +19,15 @@ export class AppComponent {
     AOS.init();
     this.responsiveService.hideMobile.subscribe(value =>  {
       this.hideMobile = value;
-      console.log(value);
     });
 
-    this.responsiveService.hideScroll.subscribe(value =>  {
-      this.responsiveService.hideScroll.value;
-      if (this.responsiveService.hideScroll.value === true) {
-        this.renderer.addClass(document.body, 'block-scroll');
-      } else {
-        this.renderer.removeClass(document.body, 'block-scroll');
-      }
-    });
+    // this.responsiveService.hideScroll.subscribe(value =>  {
+    //   this.responsiveService.hideScroll.value;
+    //   if (this.responsiveService.hideScroll.value === true) {
+    //     this.renderer.addClass(document.body, 'block-scroll');
+    //   } else {
+    //     this.renderer.removeClass(document.body, 'block-scroll');
+    // //   }
+    // });
 }
 }

@@ -4,6 +4,12 @@ import { Component, VERSION, } from "@angular/core";
 import { FormBuilder, FormGroup, FormControl, Validators, } from "@angular/forms";
 import { BreakpointObserver,Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { ResponsiveService } from "../responsive.service";
+import { FormGroupDirective } from '@angular/forms';
+import { ViewChild } from '@angular/core';
+
+/**
+ * Interface for email data structure.
+ */
 interface EmailData {
   name: string | null;
   email: string | null;
@@ -17,31 +23,49 @@ interface EmailData {
 
 })
 export class ContactComponent {
-
   title = "Formspree.io Angular " + VERSION.major + " Example";
   secretKey: string = "xeqbdjnq";
   emailForm: FormGroup;
- 
- 
-
-  constructor(private fb: FormBuilder, private httpClient: HttpClient,public responsive: BreakpointObserver, public responsiveService: ResponsiveService) {
-    this.emailForm = new FormGroup({
-      email: new FormControl('', [Validators.required, Validators.email]),
-      name: new FormControl('', [Validators.required, Validators.minLength(5),]),
-      message: new FormControl('', [Validators.required, Validators.minLength(5)]),
-      disableSelect : new FormControl(false),
-    });
+  @ViewChild(FormGroupDirective) formDirective?: FormGroupDirective;
+ /**
+   * Initializes the component with required services.
+   * 
+   * @param fb FormBuilder for handling form controls.
+   * @param httpClient HttpClient for making HTTP requests.
+   * @param responsive BreakpointObserver for responsive design.
+   * @param responsiveService Service for handling responsive functionalities.
+   */
+  constructor( private fb: FormBuilder, private httpClient: HttpClient,public responsive: BreakpointObserver, public responsiveService: ResponsiveService) {
+    this.emailForm = this.newForm;
   }
 
-
-  
   
 
-  onSubmitForm() {
+  get newForm() {
+    
+      return new FormGroup({
+        email: new FormControl('', [Validators.required, Validators.email]),
+        name: new FormControl('', [Validators.required, Validators.minLength(5),]),
+        message: new FormControl('', [Validators.required, Validators.minLength(5)]),
+        disableSelect : new FormControl(false),
+      });
+    
+  }
+  /**
+   * Handles the form submission event.
+   */
+
+  async onSubmitForm() {
     let emailData: EmailData = this.emailForm.value as EmailData;
-    this.sendEmail(emailData);
+   await this.sendEmail(emailData);
+    this.emailForm.reset();
+    this.formDirective?.resetForm();
   }
 
+ /**
+   * Retrieves error message for email form control validation.
+   * 
+   */
   getErrorMessage() {
     if (this.emailForm.get('email')?.hasError('required')) {
       return 'Please fill in a valid e-mail';
@@ -49,9 +73,11 @@ export class ContactComponent {
     return this.emailForm.get('email')?.hasError('email') ? 'Not a valid email' : '';
   }
 
+
   get email() {
     return this.emailForm.get('email') as FormControl;
   }
+
 
   get disableSelect() {
     return this.emailForm.get('disableSelect') as FormControl;
@@ -62,35 +88,39 @@ export class ContactComponent {
     return this.emailForm.get('name') as FormControl;
   }
 
+
   get message() {
     return this.emailForm.get('message') as FormControl;
   }
 
+get httpOptions() {
+  return {
+    headers: new HttpHeaders({
+      Accept: "application/json",
+      "Content-Type": "application/x-www-form-urlencoded"
+    })
+  };
+}
 
-  sendEmail(value: EmailData) {
+  /**
+   * Sends an email with the provided form data.
+   * 
+
+   */
+  async sendEmail(value: EmailData) {
     let url = "https://formspree.io/f/" + this.secretKey;
-    const httpOptions = {
-      headers: new HttpHeaders({
-        Accept: "application/json",
-        "Content-Type": "application/x-www-form-urlencoded"
-      })
-    };
     let data = `name=${value.name}&email=${value.email}&message=${value.message}`;
     let errorMessage: string = "";
-    this.httpClient.post<any>(url, data, httpOptions).subscribe({
+    this.httpClient.post<any>(url, data, await this.httpOptions).subscribe({
       next: data => {
-        console.log("email sent" + JSON.stringify(data));
+        this.responsiveService.messageSentSuccess.next(true);
+        this.emailForm.reset();
       },
       error: error => {
         errorMessage = error.message;
-        console.log('error!', errorMessage);
       }
     })
-    console.log("url is ", url);
-    console.log("data", value);
   }
-
-
 
 }
 

@@ -9,4 +9,4 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 
 
 
-ResponsiveService;
+

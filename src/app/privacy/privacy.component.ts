@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ResponsiveService } from '../responsive.service';
 
 @Component({
   selector: 'app-privacy',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./privacy.component.scss']
 })
 export class PrivacyComponent {
-
+    constructor( public responsiveService: ResponsiveService) {
+      
+    }
 }

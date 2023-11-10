@@ -1,7 +1,7 @@
 <div class="skill-set">
 <span class="skill-set-heading">Skill set</span>
 <div class="skillcontainer">
-    <div data-aos="zoom-in-up"  data-aos-duration="2000" class="skill"  *ngFor="let skill of skills; index as i">
+    <div (click)="responsiveService.sortBy(skill['skill-name'])" data-aos="zoom-in-up"  data-aos-duration="2000" class="skill"  *ngFor="let skill of skills; index as i">
         <img class="skill-img" src="/assets/img/{{skill['skill-pic']}}">
         <span>{{skill['skill-name']}}</span>
     </div>

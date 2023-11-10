@@ -8,17 +8,16 @@
 }
 
 .project-img {
-    width: 100%;
-    height: 100%;
+   
+   width: 100%;
+   height: 100%;
     transition: transform 0.3s ease;
     z-index: 5;
 
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
         box-shadow: 5px 5px 15px 0px #00000026;
         cursor: pointer;
-        border-radius: 10px;
-
     }
 
 }
@@ -89,6 +88,7 @@
     right: -11.5vw;
     top: 4vw;
     z-index: 0;
+    
 }
 
 
@@ -110,7 +110,7 @@
 .bubble-mini {
     width: 5vw;
     position: absolute;
-    bottom: -3vw;
+    bottom: -2vw;
     left: 10vh;
 }
 
@@ -149,9 +149,11 @@
     margin-top: 10px;
     padding: 10px 20px;
     color: #5988FF;
+    object-fit: contain;
     border: 2px solid #5988FF;
     border-radius: 10px;
-   height: 100%;
+   height: 50%;
+    margin-bottom: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -166,7 +168,7 @@
     &:hover {
         box-shadow: inset 250px 0 0 0 #5988FF;
         background-color: #5988FF;
-        transform: scale(1.1);
+        transform: scale(1.05);
         color: #fff;
     }
 }
@@ -185,6 +187,9 @@
 @media only screen and (max-width: 1000px) {
     .left-span {
        line-height: 70px;
+    }
+    .contact-container {
+        text-align: left;
     }
 
     .bubble2 {
@@ -207,7 +212,6 @@
        padding-bottom: 15vw;
       padding-left: 5vw;
       width: 90vw;
-
     }
 
     .mywork-container {
@@ -232,6 +236,10 @@
 align-self: center;
 margin-top: 20px;
 margin-bottom: 20px;
+}
+
+.text {
+    padding-right: 0;
 }
 
 .button-container {
@@ -273,6 +281,11 @@ margin-bottom: 20px;
     width: 100%;
     align-items: center;
     text-align: center;
+    padding: 0;
+}
+
+.align-right {
+    margin: 0;
 }
 }
 
@@ -307,6 +320,10 @@ margin-bottom: 20px;
     margin-right: 0;
         
     }
+
+    .img-container {
+        width: 100%;
+    }
  }
 
 
@@ -314,10 +331,19 @@ margin-bottom: 20px;
         .mywork {
             font-size: 20vw;
         }
+        .bubble2 {
+            top: 10px;
+        }
+        .sample {
+            width: 80vw;
+        }
 
         .heading {
-
+            padding: 0;
+            padding-top: 20px;
         }
+
+        
  }
 
  @media only screen and (max-width: 850px) { 
