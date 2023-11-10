@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ResponsiveService } from '../responsive.service';
 
 @Component({
   selector: 'app-impress',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./impress.component.scss']
 })
 export class ImpressComponent {
+  constructor(public responsiveService: ResponsiveService) {
 
+  }
 }

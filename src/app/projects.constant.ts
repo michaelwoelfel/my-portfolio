@@ -3,7 +3,7 @@ export const PROJECTS = [
         "img": "join.png",
         "title": "Join",
         "skills": "HTML | CSS | Javascript ",
-        "link": "https://michael-woelfel.com/Mein%20Join/summary.html",
+        "link": "https://michael-woelfel.com/Mein%20Join/",
         "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories",
         "github": "https://github.com/michaelwoelfel/Join-Kanban-Board",
     },

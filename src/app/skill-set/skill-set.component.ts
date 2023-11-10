@@ -14,7 +14,8 @@ constructor(public responsiveService: ResponsiveService) {}
  
  skills = [
 
-    {
+    { 
+      
       "skill-pic": "Angular.png",
       "skill-name": "Angular",
     },
@@ -23,10 +24,12 @@ constructor(public responsiveService: ResponsiveService) {}
     //   "skill-name": "Typescript",
     // },
     {
+      
       "skill-pic": "Javascript.png",
       "skill-name": "Javascript",
     },
     {
+      
       "skill-pic": "HTML.png",
       "skill-name": "HMTL",
     },
@@ -35,22 +38,31 @@ constructor(public responsiveService: ResponsiveService) {}
     //   "skill-pic": "Material.png",
     //   "skill-name": "Material",
     // },
-    {
+    { 
+      
       "skill-pic": "Firebase.png",
       "skill-name": "Firebase",
     },
     
    
     {
+      
       "skill-pic": "git.png",
       "skill-name": "Git",
     },
     {
+      
       "skill-pic": "CSS.png",
       "skill-name": "CSS",
     },
    
   ]
+
+  addShadow(i:number) {
+      let clickedSkill = document.getElementById("skill" + i);
+      clickedSkill?.classList.add("skill-selected");
+      console.log(clickedSkill);
+  }
 
 
 }

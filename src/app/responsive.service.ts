@@ -31,7 +31,7 @@ export class ResponsiveService {
    * Sorts the project array by a given skill.
    * @param skill The skill to sort the projects by.
    */
-  sortBy(skill:string) {
+  sortBy(skill:string,i:number) {
       const sortedProjects = this.projects.sort((a, b)=> {
         if (a.skills.includes(skill) && !b.skills.includes(skill)) {
           return -1;
@@ -45,7 +45,19 @@ export class ResponsiveService {
       let element = document.getElementById("my-work");
       element?.scrollIntoView();
       console.log(this.projects);
+      this.addShadow(i);
   }
+
+  addShadow(i:number) {
+    for (let i = 0; i <=10; i++) {
+      let skillElement = document.getElementById("skill" + i);
+      skillElement?.classList.remove("skill-selected");
+    }
+    let clickedSkill = document.getElementById("skill" + i);
+    clickedSkill?.classList.add("skill-selected");
+    console.log(clickedSkill);
+}
+
 
   /**
    * Toggles the visited state and accordingly the scrollbar visibility.
@@ -59,10 +71,7 @@ export class ResponsiveService {
    * Toggles the content visibility.
    */
  public checkHideContent() {
-  this.hideContent = !this.hideContent;
+  this.hideContent = false;
 }
-
-
-
 
 }
