@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { BehaviorSubject } from 'rxjs';
+import { PROJECTS } from './projects.constant';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +12,10 @@ export class ResponsiveService {
   public isVisited = new BehaviorSubject<boolean>(false);
   public hideContent = true;
   public messageSentSuccess = new BehaviorSubject<boolean>(false);
-  
+  public projects = PROJECTS;
 
-  constructor(public responsive: BreakpointObserver) { 
+  constructor(public responsive: BreakpointObserver, ) { 
     const customBreakpoint = '(min-width: 1050px)';
-
     this.responsive.observe(customBreakpoint)
       .subscribe((state: BreakpointState) => {
         if (state.matches) {
@@ -25,34 +25,14 @@ export class ResponsiveService {
         }
       });
   }
-  projects = [
-
-    {
-      "img": "join.png",
-      "title": "Join",
-      "skills": "HTML | CSS | Javascript ",
-      "link": "https://michael-woelfel.com/Mein%20Join/summary.html",
-      "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories",
-      "github": "https://github.com/michaelwoelfel/Join-Kanban-Board",
-    },
-    {
-      "img": "el-pollo-loco.png",
-      "title": "Pollo Loco",
-      "link": "https://michael-woelfel.com/El%20Pollo%20Loco/index.html",
-      "skills": "HTML| CSS | Javascript",
-      "description": "Jump, run and throw game based object-oriented approach. Help Pepe to find coins and tabasco to fight against the big endboss.",
-      "github": "https://github.com/michaelwoelfel/el-pollo-loco",
-    },
-
-    
-
  
-   
 
-  ]
-
+    /**
+   * Sorts the project array by a given skill.
+   * @param skill The skill to sort the projects by.
+   */
   sortBy(skill:string) {
-      this.projects.sort((a, b)=> {
+      const sortedProjects = this.projects.sort((a, b)=> {
         if (a.skills.includes(skill) && !b.skills.includes(skill)) {
           return -1;
         }else if (!a.skills.includes(skill) && b.skills.includes(skill)) {
@@ -60,17 +40,24 @@ export class ResponsiveService {
         }
         return 0;
       })
+      this.projects = sortedProjects;
+      console.log(skill);
       let element = document.getElementById("my-work");
       element?.scrollIntoView();
+      console.log(this.projects);
   }
 
- 
-
+  /**
+   * Toggles the visited state and accordingly the scrollbar visibility.
+   */
   public checkVisited() {
     this.isVisited.next(!this.isVisited.value);
     this.hideScroll.next(this.isVisited.value);
  }
 
+  /**
+   * Toggles the content visibility.
+   */
  public checkHideContent() {
   this.hideContent = !this.hideContent;
 }

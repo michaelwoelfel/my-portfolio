@@ -6,15 +6,11 @@ import { BreakpointObserver,Breakpoints, BreakpointState } from '@angular/cdk/la
 import { ResponsiveService } from "../responsive.service";
 import { FormGroupDirective } from '@angular/forms';
 import { ViewChild } from '@angular/core';
+import { EmailData } from "../email-data.interface";
 
 /**
  * Interface for email data structure.
  */
-interface EmailData {
-  name: string | null;
-  email: string | null;
-  message: string | null;
-}
 
 @Component({
   selector: 'app-contact',

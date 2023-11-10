@@ -24,7 +24,7 @@ constructor(public responsiveService: ResponsiveService) {}
     // },
     {
       "skill-pic": "Javascript.png",
-      "skill-name": "Javscript",
+      "skill-name": "Javascript",
     },
     {
       "skill-pic": "HTML.png",
@@ -35,10 +35,10 @@ constructor(public responsiveService: ResponsiveService) {}
     //   "skill-pic": "Material.png",
     //   "skill-name": "Material",
     // },
-    // {
-    //   "skill-pic": "Firebase.png",
-    //   "skill-name": "Firebase",
-    // },
+    {
+      "skill-pic": "Firebase.png",
+      "skill-name": "Firebase",
+    },
     
    
     {
