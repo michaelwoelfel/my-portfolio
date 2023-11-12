@@ -35,12 +35,11 @@
   max-height: 90%;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .introduction-text {
   padding-right: 10vh;
-  padding-top: 20%;
-
 }
 
 
@@ -61,7 +60,7 @@
 .hello {
   font-family: "Montserrat";
   font-size: 4vw;
-  line-height: 9vh;
+  line-height:5vw;
   white-space: nowrap;
 }
 
@@ -98,22 +97,26 @@
   border-radius: 20px;
   padding-bottom: 5px;
   padding-top: 5px;
-  transition: color .2s ease, box-shadow .2s ease-in-out;
+  transition: color .2s ease-in-out, box-shadow .2s ease-in-out;
 
   &:hover {
-    box-shadow: inset 150px 0 0 0 #5988FF;
     color: white;
+    box-shadow: inset 250px 0 0 0 #5988FF;
+    background-color: #5988FF;
+    transform: scale(1.05);
+    color: #fff;
   }
 }
 
 .img-container {
   display: flex;
-  max-height: 50%;
+  height: 100vh;
   width: 50%;
   align-items: flex-end;
 }
 
 .michael {
+  display: flex;
   width: 100%;
   height: 100%;
   padding-left: 10vh;
@@ -162,7 +165,7 @@
   gap: 25px;
   flex-direction: column;
   right: 10vh;
-  bottom: 10vh;
+  bottom: 15vh;
 }
 
 .icon {
@@ -190,8 +193,8 @@
 
   &:hover {
     cursor: pointer;
-    border-radius: 50%;
-    box-shadow: 14px -3px 0px 0px #5988FF;
+    // border-radius: 50%;
+    // box-shadow: 14px -3px 0px 0px #5988FF;
   }
 }
 
@@ -240,8 +243,11 @@
 
 @media only screen and (max-width: 1050px) {
   .header {
-    background-image: url("/assets/img/background-resp.png") !important;
+    background-image: url("/assets/img/background-resp.png")!important;
     background-size: cover;
+  }
+  .header-picture {
+    padding-left: 10vw;
   }
 
   .scroll-and-bar {
@@ -258,12 +264,21 @@
     font-size: 20vw;
     width: 100vw;
     display: flex;
-    align-items: center;
-    gap: 10px;
+    justify-self: left;
+    text-align: left;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 20px;
+    width: 80%;
+  }
+
+  .introduction-right-side{
+    width: 100%;
+    max-width: 100%;
   }
 
   .img-container {
-    height: 80vh;
+    height: 70vh;
     width: 80%;
   }
 
@@ -287,43 +302,42 @@
     overflow-x: hidden;
   }
 
+  
+
   @media only screen and (max-width: 650px) {
     .header {
       background-size: contain;
     }
 
     .header-picture {
-      padding-left: 5vh;
+      padding-left: 10vw;
     }
 
     .nav-button {
-      right: 2vw;
+      right: 10vw;
       top: 60px;
     }
 
-    .introduction-right-side{
-      width: 100%;
-    }
+    
 
     .hello {
-      font-size: 5vw;
+     
     }
 
     .font {
-      font-size: 12vw;
-    }
-    
-    .font-developer {
-      font-size: 12vw;
-      line-height: 10vw;
+   
     }
 
-    .introduction-text {
-      font-size: 10vw!important;
-      width: 100%;
-      padding-left: 5vh;
-      padding-right: 5vh;;
+    .introduction-text{
+     
     }
+    
+    // .font-developer {
+    //   font-size: 12vw;
+    //   line-height: 10vw;
+    // }
+
+   
   }
 }
 
@@ -348,6 +362,10 @@
   .nav-button {
     right: 2vw;
     top: 50px;
+  }
+
+  .img-container{
+    height:50vh;
   }
 
   .header-menu{

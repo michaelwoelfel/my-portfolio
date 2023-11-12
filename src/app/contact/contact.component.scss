@@ -291,13 +291,13 @@
      }
  
      .left-side {
-         width: 80vw;
+         width: 80%;
          margin:0;
          text-align: left;
-        
      }
     .contact {
-        padding-left: 3.5vw;
+        padding-left: 6vw;
+        padding-top: 20px;
     }
 
     .text {
@@ -326,8 +326,9 @@
      
  
      .contact-heading {
-      padding: 0;
+      padding-top: 20px;
       display: flex;
+      padding-left: 10px;
         justify-content: center;
         text-align: left;
      }

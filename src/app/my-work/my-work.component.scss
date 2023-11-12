@@ -83,10 +83,9 @@
 .bubble-pollo {
     position: absolute;
     width: 30%;
-    right: -10vh;
+    right: -12vw;
     top: 4vw;
     z-index: 0;
-    
 }
 
 
@@ -132,7 +131,7 @@
     font-size: 23px;
     color: #5988FF;
     font-family: 'Montserrat';
-    line-height: 5vw;
+    line-height: 1vw;
 }
 
 .live-test {
@@ -204,13 +203,16 @@
     .bubble-join {
         width: 20vw;
         top: 20%;
+        left: -10vw;
     }
 
     .heading {
-       gap: 40px;
-       padding-bottom: 15vw;
-      padding-left: 5vw;
-      width: 90vw;
+        gap: 40px;
+        padding-bottom: 15vw;
+        padding-left: 0;
+        margin: 0;
+        text-align: left;
+        width: 80%;
     }
 
     .mywork-container {
@@ -224,6 +226,7 @@
     flex-direction: column;
     align-items: center!important;
     justify-content: center!important;
+    width: 80%;
 }
 
 .img-container {
@@ -274,6 +277,10 @@ margin-bottom: 20px;
         transform: scale(1.1);
         color: #fff;
     }
+}
+
+.project-description{
+    width: 80%;
 }
 
 .description-container {
@@ -364,5 +371,11 @@ margin-bottom: 20px;
             }
             .bubble-mini{
                 left: 3vw;
+            }
+
+            .project-skills {
+                font-size: 18px;
+                flex-wrap: wrap;
+                white-space: wrap;
             }
  }

@@ -26,7 +26,7 @@ constructor(public responsiveService: ResponsiveService) {}
     {
       
       "skill-pic": "Javascript.png",
-      "skill-name": "Javascript",
+      "skill-name": "JavaScript",
     },
     {
       
