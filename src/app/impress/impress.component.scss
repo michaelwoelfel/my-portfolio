@@ -118,24 +118,13 @@
        }
      }
      
-     
-   
-     
-     
-     
+  
      .header-picture {
        width: auto;
        height: 60px;
        padding-left: 10vw;
      }
-     
-
-     
-     
-  
-     
-     
-     
+    
      ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
        background-color: #fff!important;
      }
@@ -255,9 +244,9 @@
           background-repeat: no-repeat;
          
        }
-       .header-picture {
-         padding-left: 10vw;
-       }
+
+       .header-picture
+       
      
        .scroll-and-bar {
          display: none;
@@ -311,32 +300,7 @@
          color: white;
          overflow-x: hidden;
        }
-     
-     
-       @media only screen and (max-width: 1000px) { 
-         .header {
-           height: 115vh;
-         }
-       }
-     
-       @media only screen and (max-width: 900px) { 
-         .header {
-          height: 100vh;
-         }
-       }
     
-         
-     
-      
-        
-     
-     
-     
-     
-    
-    
-   
-
 .privacy h2 {
   font-size: 1.5em;
   margin-top: 1em;
@@ -358,15 +322,6 @@
   margin-top: 0.4em;
 }
 
-
-
-
-
-
-    img {
-        transform: rotate(180deg);
-     
-    }
 
 .go-back-button {
     position: relative;
