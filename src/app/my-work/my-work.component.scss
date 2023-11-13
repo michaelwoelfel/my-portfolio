@@ -81,6 +81,7 @@
 }
 
 .bubble-pollo {
+    
     position: absolute;
     width: 30%;
     right: -12vw;
@@ -134,8 +135,39 @@
     line-height: 1vw;
 }
 
+.button-container {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+}
 .live-test {
-    display: none;
+    display: flex;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: white;
+    height: 50%;
+    white-space: nowrap;
+    background-color:#5988FF;
+    border: 2px solid #5988FF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    box-shadow: 5px 5px 15px 0px #00000026;
+    text-decoration: none;
+    transition: background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+
+    &:hover {
+        box-shadow: inset 250px 0 0 0 #5988FF;
+        background-color: #5988FF;
+        transform: scale(1.1);
+        color: #fff;
+    }
 }
 
 .project-description {
@@ -244,40 +276,9 @@ margin-bottom: 20px;
     padding-right: 0;
 }
 
-.button-container {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 20px;
-}
 
-.live-test {
-    display: flex;
-    margin-top: 10px;
-    padding: 10px 20px;
-    color: white;
-    height: 100%;
-    white-space: nowrap;
-    background-color:#5988FF;
-    border: 2px solid #5988FF;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 23px;
-    box-shadow: 5px 5px 15px 0px #00000026;
-    text-decoration: none;
-    transition: background-color 0.3s ease,
-        color 0.3s ease,
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
 
-    &:hover {
-        box-shadow: inset 250px 0 0 0 #5988FF;
-        background-color: #5988FF;
-        transform: scale(1.1);
-        color: #fff;
-    }
-}
+
 
 .project-description{
     width: 80%;

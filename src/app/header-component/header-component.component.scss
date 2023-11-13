@@ -3,7 +3,7 @@
 .header {
   position: relative;
   background-image: url("/assets/img/hero-bg.png");
-  height: auto;
+  height: 100vh;
   max-width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -44,8 +44,10 @@
 
 
 .introduction-right-side {
+  position: absolute;
   max-width: 50%;
   height: 100%;
+  right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,12 +90,13 @@
 }
 
 .header-link {
-  font-size: 23px;
+  font-size: 25px;
   text-decoration: none;
   box-shadow: inset 0 0 0 0 #5988FF;
   color: #5988FF;
   padding-left: 10px;
   padding-right: 10px;
+  margin-left: 20px;
   border-radius: 20px;
   padding-bottom: 5px;
   padding-top: 5px;
@@ -109,8 +112,10 @@
 }
 
 .img-container {
+  position: absolute;
+  bottom: 0;
   display: flex;
-  height: 100vh;
+
   width: 50%;
   align-items: flex-end;
 }
@@ -118,7 +123,7 @@
 .michael {
   display: flex;
   width: 100%;
-  height: 100%;
+
   padding-left: 10vh;
 }
 
@@ -135,7 +140,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  height: 64%;
+  height: auto;
 
 }
 
@@ -152,12 +157,78 @@
 
 .blue-bar {
   position: absolute;
-  height: 45%;
+  height: 30vh;
   background-color: #5988FF;
   width: 2px;
   margin-top: 20px;
-  bottom: 0;
+  bottom: 15%;
 }
+
+@import 'aos/dist/aos.css';
+
+html {
+  scroll-behavior: smooth;
+ 
+}
+
+body{
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+
+.blue-bubble {
+    position: relative;
+  top: 0px;
+  left: 50%;
+  z-index: 1;
+  width: 20vw;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #fff!important;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  border-radius: 4px;
+  background-color: #fff!important;
+  padding: 0.75em 0.75em 0 0.75em;
+  border: 1px solid #f94747;
+}
+
+
+.fadeOut {
+  animation-name: fade-out;
+  animation-duration: 0.5s;
+}
+
+
+
+
+@keyframes blend-in {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 0.9;
+  }
+}
+
+@keyframes fade-out {
+  from {
+      opacity: 0.9;
+  }
+
+  to {
+      opacity: 0;
+  }
+}
+
+
 
 .icons {
   display: flex;
@@ -234,7 +305,6 @@
   scroll-behavior: smooth;
 }
 
-
 @media only screen and (max-width: 1100px) {
   .hello {
     font-size: 3vw;
@@ -244,7 +314,8 @@
 @media only screen and (max-width: 1050px) {
   .header {
     background-image: url("/assets/img/background-resp.png")!important;
-    background-size: cover;
+    height: 120vh;
+    
   }
   .header-picture {
     padding-left: 10vw;
@@ -274,11 +345,12 @@
 
   .introduction-right-side{
     width: 100%;
+    top: 100px;
     max-width: 100%;
   }
 
   .img-container {
-    height: 70vh;
+
     width: 80%;
   }
 
@@ -302,15 +374,37 @@
     overflow-x: hidden;
   }
 
-  
 
-  @media only screen and (max-width: 650px) {
+  @media only screen and (max-width: 1000px) { 
     .header {
-      background-size: contain;
+      height: 115vh;
+    }
+  }
+
+  @media only screen and (max-width: 900px) { 
+    .header {
+     height: 100vh;
+    }
+  }
+  @media only screen and (max-width: 700px) {  
+    .header {
+      height: 90vh;
+      background-size: cover;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .header {
+      background-size: cover;
+      height: 80vh;
     }
 
     .header-picture {
       padding-left: 10vw;
+    }
+
+    .michael {
+      object-fit: contain;
     }
 
     .nav-button {
@@ -342,6 +436,10 @@
 }
 
 @media only screen and (max-width: 500px) {
+
+  .header {
+    height: 75vh;
+  }
   .hello {
     font-size: 7vw;
   }
@@ -364,11 +462,27 @@
     top: 50px;
   }
 
+  .header {
+   
+  }
+
   .img-container{
-    height:50vh;
+
   }
 
   .header-menu{
     padding-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 450px) { 
+  .header {
+    height: 70vh;
+  }
+}
+
+@media only screen and (max-width: 450px) { 
+  .header {
+    height: 65vh;
   }
 }

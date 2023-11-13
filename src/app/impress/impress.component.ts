@@ -6,8 +6,17 @@ import { ResponsiveService } from '../responsive.service';
   templateUrl: './impress.component.html',
   styleUrls: ['./impress.component.scss']
 })
-export class ImpressComponent {
-  constructor(public responsiveService: ResponsiveService) {
 
+export class ImpressComponent {
+
+  hideMobile = true;
+  constructor( public responsiveService: ResponsiveService) {
+    
   }
+  ngOnInit() {
+    
+    this.responsiveService.hideMobile.subscribe(value =>  {
+      this.hideMobile = value;
+    });
+}
 }

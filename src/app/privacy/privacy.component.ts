@@ -7,7 +7,17 @@ import { ResponsiveService } from '../responsive.service';
   styleUrls: ['./privacy.component.scss']
 })
 export class PrivacyComponent {
+
+  hideMobile = true;
     constructor( public responsiveService: ResponsiveService) {
       
     }
+
+    ngOnInit() {
+      
+      this.responsiveService.hideMobile.subscribe(value =>  {
+        this.hideMobile = value;
+      });
+}
+
 }

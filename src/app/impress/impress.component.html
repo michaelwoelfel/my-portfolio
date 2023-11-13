@@ -1,5 +1,20 @@
-<div id="impress" *ngIf="!responsiveService.hideContent"  class="impress-container">
-    <!-- <a class="go-back-button" href="#contact"><img src="assets/img/Go up button s2.png"></a> -->
+<div class="header">
+    <div id="header" class="header-menu">
+        <img class="header-picture" src="assets/img/Group.png">
+        <app-resp-menu [ngClass]="{'fadeOut': !responsiveService.isVisited.value}"
+        *ngIf="this.responsiveService.hideMobile.value && this.responsiveService.isVisited.value"></app-resp-menu>
+        <div class="nav-button" [class.visited]="responsiveService.isVisited | async"
+        (click)="this.responsiveService.checkVisited()" *ngIf="this.hideMobile">
+        <div></div>
+    </div>
+        <div *ngIf="!this.hideMobile" class="header-text"><a 
+            href="#lets-work" class="header-link">About me</a><a href="#skill-set"  class="header-link"> Skill
+                set</a><a href="#my-work" class="header-link">My work</a></div>
+    </div>
+   
+
+
+<div id="impress" class="impress-container">
 
 
     <h1>Impressum</h1>
@@ -113,9 +128,5 @@
     created by Md Tanvirul Haque - Flaticon Facebook icons created by Hight Quality Icons - FlaticonInstagram icons
     created by Pixel perfect - Flaticon FontAwesome unter the Creative Commons Attribution 4.0 International license.
 </div>
-
-
-
-
-
-
+</div>
+<app-footer></app-footer>

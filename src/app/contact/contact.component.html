@@ -22,8 +22,8 @@
                 <textarea matInput placeholder="Hi Michael, i want to work with you in a new project, when do you have time for a meeting ?"[formControl]="message" required></textarea>
             </mat-form-field>
             <div data-aos="fade-left" data-aos-duration="800" class="message-sent" *ngIf="responsiveService.messageSentSuccess.value == true">Thank you for reaching out!  I will respond as soon as possible.</div>
-            <mat-checkbox   [formControl]="disableSelect" class="privacy-policy">I've read the <a  (click)="this.responsiveService.checkHideContent()" routerLink="privacy-component" routerLinkActive="active">privacy policy</a> and agree to the processing of my data as outlined.</mat-checkbox>
-            <button matNativeControl [disabled]="!disableSelect.value"  class="button"mat-raised-button type="submit" >Say hello ;)</button>
+            <mat-checkbox   [formControl]="disableSelect" class="privacy-policy">I've read the <a   href="/privacy" target="_blank">privacy policy</a> and agree to the processing of my data as outlined.</mat-checkbox>
+            <button matNativeControl [disabled]="!disableSelect.value || !emailForm.valid "  class="button"mat-raised-button type="submit" >Say hello ;)</button>
         </form>
    
         </div>

@@ -1,0 +1,11 @@
+<ng-container>
+    <app-resp-menu [ngClass]="{'fadeOut': !responsiveService.isVisited.value}"
+    *ngIf="this.responsiveService.hideMobile.value && this.responsiveService.isVisited.value"></app-resp-menu>
+  <app-header-component class="header" id="header"></app-header-component>
+      <img class="blue-bubble" src="assets/img/circle.png">
+      <app-lets-work id="lets-work"></app-lets-work>
+      <app-skill-set id="skill-set"></app-skill-set>
+      <app-my-work id="my-work"></app-my-work>
+      <app-contact id="contact"></app-contact>
+    </ng-container>
+  <app-footer></app-footer>

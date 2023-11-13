@@ -7,12 +7,13 @@ import { PROJECTS } from './projects.constant';
   providedIn: 'root'
 })
 export class ResponsiveService {
-  hideMobile = new BehaviorSubject<boolean>(true);
+ public hideMobile = new BehaviorSubject<boolean>(true);
   public hideScroll= new BehaviorSubject<boolean>(false);
   public isVisited = new BehaviorSubject<boolean>(false);
   public hideContent = true;
   public messageSentSuccess = new BehaviorSubject<boolean>(false);
   public projects = PROJECTS;
+ 
 
   constructor(public responsive: BreakpointObserver, ) { 
     const customBreakpoint = '(min-width: 1050px)';

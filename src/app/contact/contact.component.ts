@@ -118,6 +118,11 @@ get httpOptions() {
     })
   }
 
+  openImpressum() {
+    window.open('/privacy', '_blank');
+  
+  }
+
 }
 
 

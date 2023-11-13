@@ -6,13 +6,33 @@ import { SkillSetComponent } from './skill-set/skill-set.component';
 import { MyWorkComponent } from './my-work/my-work.component';
 import { ImpressComponent } from './impress/impress.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { AppComponent } from './app.component'; 
+import { HeaderComponentComponent } from './header-component/header-component.component';
+import { MainContainerComponent } from './main-container/main-container.component';
 const routes: Routes = [
-  { path: 'contact-component', component: ContactComponent },
-  { path: 'lets-work-component', component: LetsWorkComponent },
-  { path: 'skill-set-component', component: SkillSetComponent },
-  { path: 'my-work-component', component: MyWorkComponent },
-  { path: 'impress-component', component: ImpressComponent },
-  { path: 'privacy-component', component: PrivacyComponent },
+  { 
+    path: '', 
+    component: MainContainerComponent,
+    children: [
+    
+    ]
+  },
+  { 
+    path: 'impress', 
+    component: ImpressComponent,
+    children: [
+      { path: '', component: ImpressComponent }
+    ]
+  },
+
+  { 
+    path: 'privacy', 
+    component: PrivacyComponent,
+    children: [
+      { path: '', component: PrivacyComponent }
+    ]
+  },
+  // Weitere Routen ...
 ];
 
 @NgModule({

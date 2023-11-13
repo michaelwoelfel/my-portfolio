@@ -26,6 +26,7 @@ import { MatIconModule} from '@angular/material/icon';
 import { RespMenuComponent } from './resp-menu/resp-menu.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { ImpressComponent } from './impress/impress.component';
+import { MainContainerComponent } from './main-container/main-container.component';
 
 
 
@@ -43,6 +44,7 @@ import { ImpressComponent } from './impress/impress.component';
     RespMenuComponent,
     PrivacyComponent,
     ImpressComponent,
+    MainContainerComponent,
   
   ],
   imports: [

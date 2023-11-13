@@ -1,13 +1,12 @@
-
 <div class="header">
     <div id="header" class="header-menu">
         <img class="header-picture" src="assets/img/Group.png">
-        <div class="nav-button" [class.visited] = "responsiveService.isVisited | async"
-        (click) = "this.responsiveService.checkVisited()"  *ngIf="this.hideMobile">
-          <div></div>
+        <div class="nav-button" [class.visited]="responsiveService.isVisited | async"
+            (click)="this.responsiveService.checkVisited()" *ngIf="this.hideMobile">
+            <div></div>
         </div>
-        <div *ngIf="!this.hideMobile" class="header-text"><a 
-            href="#lets-work" class="header-link">About me</a><a href="#skill-set"  class="header-link"> Skill
+        <div *ngIf="!this.hideMobile" class="header-text"><a href="#lets-work" class="header-link">About me</a><a
+                href="#skill-set" class="header-link"> Skill
                 set</a><a href="#my-work" class="header-link">My work</a></div>
     </div>
     <div class="introduction">
@@ -16,17 +15,20 @@
         </div>
 
         <div class="introduction-right-side">
-            <div data-aos="fade-left" data-aos-duration="3000" class="introduction-text"><span class="hello">Hello! I am Michael</span>
+            <div data-aos="fade-left" data-aos-duration="3000" class="introduction-text"><span class="hello">Hello! I am
+                    Michael</span>
                 <span class="font">FRONTEND</span>
                 <span class="font-developer">DEVELOPER</span>
             </div>
             <div class="scroll-and-bar">
                 <span data-aos="fade-down" data-aos-duration="2000" class="scroll">SCROLL</span>
-                <div data-aos="fade-down"  data-aos-duration="2000"class="blue-bar"></div>
+                <div data-aos="fade-down" data-aos-duration="2000" class="blue-bar"></div>
                 <div class="icons">
-                    <a href="https://github.com/michaelwoelfel/"><img class="icon" src="assets/img/github.png"></a>
+                    <a href="https://github.com/michaelwoelfel/" target="_blank"><img class="icon"
+                            src="assets/img/github.png"></a>
                     <a href="#contact"><img class="icon" src="assets/img/mail.png"></a>
-                    <a href="https://www.linkedin.com/in/michael-w%C3%B6lfel-105bb7177/"><img class="icon" src="assets/img/linkedin.png"></a>
+                    <a href="https://www.linkedin.com/in/michael-w%C3%B6lfel-105bb7177/" target="_blank"><img
+                            class="icon" src="assets/img/linkedin.png"></a>
                 </div>
             </div>
         </div>

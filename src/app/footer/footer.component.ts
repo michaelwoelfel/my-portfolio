@@ -11,4 +11,9 @@ export class FooterComponent {
     constructor(public responsiveService: ResponsiveService) {
 
     }
+
+    openImpressum() {
+      window.open('/impress', '_blank');
+    
+    }
 }
