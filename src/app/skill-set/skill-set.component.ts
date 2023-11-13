@@ -25,13 +25,13 @@ constructor(public responsiveService: ResponsiveService) {}
     // },
     {
       
-      "skill-pic": "Javascript.png",
+      "skill-pic": "JavaScript.png",
       "skill-name": "JavaScript",
     },
     {
       
       "skill-pic": "HTML.png",
-      "skill-name": "HMTL",
+      "skill-name": "HTML",
     },
 
     // {

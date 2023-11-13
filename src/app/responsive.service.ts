@@ -16,7 +16,7 @@ export class ResponsiveService {
  
 
   constructor(public responsive: BreakpointObserver, ) { 
-    const customBreakpoint = '(min-width: 1050px)';
+    const customBreakpoint = '(min-width: 1184px)';
     this.responsive.observe(customBreakpoint)
       .subscribe((state: BreakpointState) => {
         if (state.matches) {
