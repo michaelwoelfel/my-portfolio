@@ -9,14 +9,14 @@ import { ResponsiveService } from '../responsive.service';
 
 export class ImpressComponent {
 
-  hideMobile = true;
-  constructor( public responsiveService: ResponsiveService) {
-    
+   public hideMobile = true;
+  constructor(public responsiveService: ResponsiveService) {
+
   }
   ngOnInit() {
-    
-    this.responsiveService.hideMobile.subscribe(value =>  {
+
+    this.responsiveService.hideMobile.subscribe(value => {
       this.hideMobile = value;
     });
-}
+  }
 }

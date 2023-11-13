@@ -8,12 +8,23 @@
 
      .header {
        background-image: url("/assets/img/hero-bg.png");
-       max-width: 100%;
+      width: 100%;;
        background-repeat: no-repeat;
        background-size: contain;
       color: black;
     
      }
+
+     .impress-container {
+      color: black;
+      font-family: "Montserrat";
+      font-size: 16px;
+      padding: 10vw;
+      position: relative;
+      background-color: transparent;
+   
+    
+      }
      
      .nav-menu {
        background-color: red;
@@ -115,7 +126,7 @@
      .header-picture {
        width: auto;
        height: 60px;
-       padding-left: 10vh;
+       padding-left: 10vw;
      }
      
 
@@ -179,8 +190,8 @@
      
      
      .nav-button {
-       top: 50px;
-       right: 10vh;
+       top: 56px;
+       right: 10vw;
        transform: translate(-50%, -50%);
        position: absolute;
        z-index: 10 !important;
@@ -239,8 +250,9 @@
      
      @media only screen and (max-width: 1050px) {
        .header {
-         background-image: url("/assets/img/background-resp.png")!important;
-      
+         background-image: url("/assets/img/background-resp.png");
+          background-size: contain;
+          background-repeat: no-repeat;
          
        }
        .header-picture {
@@ -312,54 +324,11 @@
           height: 100vh;
          }
        }
-       @media only screen and (max-width: 700px) {  
-         .header {
-           height: 90vh;
-           background-size: cover;
-         }
-       }
-     
-       @media only screen and (max-width: 600px) {
-         .header {
-           background-size: cover;
-           height: 80vh;
-         }
-     
-         .header-picture {
-           padding-left: 10vw;
-         }
-     
-         .michael {
-           object-fit: contain;
-         }
-     
-         .nav-button {
-           right: 10vw;
-           top: 60px;
-         }
-     
+    
          
      
-         .hello {
-          
-         }
-     
-         .font {
+      
         
-         }
-     
-         .introduction-text{
-          
-         }
-         
-         // .font-developer {
-         //   font-size: 12vw;
-         //   line-height: 10vw;
-         // }
-     
-        
-       }
-     }
      
      
      
@@ -392,16 +361,7 @@
 
 
 
-.impress-container {
-    color: black;
-    font-family: "Montserrat";
-    font-size: 16px;
-    padding: 10%;
-    position: relative;
-    background-color: transparent;
- 
-  
-    }
+
 
     img {
         transform: rotate(180deg);
@@ -449,6 +409,7 @@
   .impress-container a:hover {
     text-decoration: underline;
   }
+}
   
-  /* Add further styles as needed */
+
   

@@ -136,7 +136,6 @@
        .michael {
          display: flex;
          width: 100%;
-       
          padding-left: 10vh;
        }
        
@@ -145,7 +144,7 @@
        .header-picture {
          width: auto;
          height: 60px;
-         padding-left: 10vh;
+         padding-left: 10vw;
        }
        
        .scroll-and-bar {
@@ -267,7 +266,7 @@
        
        .nav-button {
          top: 50px;
-         right: 10vh;
+         right: 10vw;
          transform: translate(-50%, -50%);
          position: absolute;
          z-index: 10 !important;
