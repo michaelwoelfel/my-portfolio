@@ -1,6 +1,4 @@
 
-<app-resp-menu [ngClass]="{'fadeOut': !responsiveService.isVisited.value}"
-*ngIf="this.responsiveService.hideMobile.value && this.responsiveService.isVisited.value"></app-resp-menu>
 <div class="header">
     <div id="header" class="header-menu">
         <img class="header-picture" src="assets/img/Group.png">
@@ -12,7 +10,12 @@
             href="#lets-work" class="header-link">About me</a><a href="#skill-set"  class="header-link"> Skill
                 set</a><a href="#my-work" class="header-link">My work</a></div>
     </div>
+    </div>
     <div id="impress" class="impress-container">
+        <app-resp-menu [ngClass]="{'fadeOut': !responsiveService.isVisited.value}"
+*ngIf="this.responsiveService.hideMobile.value && this.responsiveService.isVisited.value"></app-resp-menu>
+
+    <div class="text">
         <h1>Impressum</h1>
         <h2> Angaben gemäß § 5 TMG</h2>
 
@@ -153,11 +156,12 @@
         created by Pixel perfect - Flaticon FontAwesome unter the Creative Commons Attribution 4.0 International
         license.
     </div>
-
-
-
     <app-footer></app-footer>
-</div>
+    </div>
+
+
+
+
 
 
 

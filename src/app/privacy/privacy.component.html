@@ -1,5 +1,4 @@
-<app-resp-menu [ngClass]="{'fadeOut': !responsiveService.isVisited.value}"
-*ngIf="this.responsiveService.hideMobile.value && this.responsiveService.isVisited.value"></app-resp-menu>
+
 <div class="header">
     <div id="header" class="header-menu">
         <img class="header-picture" src="assets/img/Group.png">
@@ -11,9 +10,12 @@
             href="#lets-work" class="header-link">About me</a><a href="#skill-set"  class="header-link"> Skill
                 set</a><a href="#my-work" class="header-link">My work</a></div>
     </div>
-    <div id="privacy"  class="privacy">
-        <!-- <a   class="go-back-button" href="#contact"><img  src="assets/img/Go up button s2.png"></a> -->
-    
+    </div>
+    <div id="impress" class="impress-container">
+        <app-resp-menu [ngClass]="{'fadeOut': !responsiveService.isVisited.value}"
+*ngIf="this.responsiveService.hideMobile.value && this.responsiveService.isVisited.value"></app-resp-menu>
+
+    <div class="text">
         <h2>Anbieter und Verantwortlicher</h2>
         <p>Der Eigentümer stellt keine Auflistung der erhobenen personenbezogenen Daten zur Verfügung.</p>
         Vollständige Details zu jeder Art von verarbeiteten personenbezogenen Daten werden in den dafür vorgesehenen
@@ -258,12 +260,26 @@
         Diese Datenschutzerklärung bezieht sich ausschließlich auf diese Anwendung, sofern in diesem Dokument nicht anders
         angegeben.
     </div>
-
-    
-</div>
-<app-footer></app-footer>
+    <app-footer></app-footer>
+    </div>
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   

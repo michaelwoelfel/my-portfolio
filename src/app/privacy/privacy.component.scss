@@ -1,28 +1,38 @@
-.privacy {
-    color: black;
-    font-family: "Montserrat";
-    font-size: 16px;
-    background-color: #FBFCFF;
-    padding: 10vw;
-    position: relative;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: transparent;
-   
+.header {
+      
+  width: 100vw;
+  height: 400px;
+  background-image: url("/assets/img/hero-bg.png");
+
+  background-size: cover;
+  color: black;
+
+
+ }
+
+ .text {
+  padding: 10vw;
+  background-color: #EAF0FF;
+ }
+ 
+
+ .impress-container {
+ 
+
+  
+  color: black;
+  font-family: "Montserrat";
+  font-size: 16px;
+
+  position: relative;
+ 
+
+
   }
-
-
        
 
        @import 'aos/dist/aos.css';
 
-       .header {
-         background-image: url("/assets/img/hero-bg.png");
-         background-repeat: no-repeat;
-         background-size: contain;
-        color: black;
-        
-       }
        
        .nav-menu {
          background-color: red;
