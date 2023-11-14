@@ -3,14 +3,17 @@
     <div class="left-side">
         <span class="text-heading">Got a problem to solve?</span>
         <span class="text">Contact me through this form, ready to help you solve your problems.</span>
-        <div><span class="text-footer">Need a Developer?</span><span class="footer-contact-span"> Contact me !</span></div>
-       <div class="bubble-container"> <img data-aos="zoom-in-up"  data-aos-duration="2000" class="bubble_1" src="assets/img/contact_bubble_2.png"></div>
+        <div><span class="text-footer">Need a Developer?</span><span class="footer-contact-span"> Contact me !</span>
+        </div>
+        <div class="bubble-container"> <img data-aos="zoom-in-up" data-aos-duration="2000" class="bubble_1"
+                src="assets/img/contact_bubble_2.png"></div>
     </div>
     <div class="right-side">
         <form class="form-right-side" [formGroup]="emailForm" (ngSubmit)="onSubmitForm()">
             <mat-form-field class="form-field">
-                <mat-label  class="form-field">Your name</mat-label>
-                <input  class="form-field" class="placeholder" matInput placeholder ="Your Name" [formControl]="name" required>
+                <mat-label class="form-field">Your name</mat-label>
+                <input class="form-field" class="placeholder" matInput placeholder="Your Name" [formControl]="name"
+                    required>
             </mat-form-field>
             <mat-form-field class="full-width">
                 <mat-label>Your email</mat-label>
@@ -19,13 +22,20 @@
             </mat-form-field>
             <mat-form-field class="full-width">
                 <mat-label>Your message</mat-label>
-                <textarea matInput placeholder="Hi Michael, i want to work with you in a new project, when do you have time for a meeting ?"[formControl]="message" required></textarea>
+                <textarea matInput
+                    placeholder="Hi Michael, i want to work with you in a new project, when do you have time for a meeting ?"
+                    [formControl]="message" required></textarea>
             </mat-form-field>
-            <div data-aos="fade-left" data-aos-duration="800" class="message-sent" *ngIf="responsiveService.messageSentSuccess.value == true">Thank you for reaching out!  I will respond as soon as possible.</div>
-            <mat-checkbox   [formControl]="disableSelect" class="privacy-policy">I've read the <a   href="/privacy" target="_blank">privacy policy</a> and agree to the processing of my data as outlined.</mat-checkbox>
-            <button matNativeControl [disabled]="!disableSelect.value || !emailForm.valid "  class="button"mat-raised-button type="submit" >Say hello ;)</button>
+            <div data-aos="fade-left" data-aos-duration="800" class="message-sent"
+                *ngIf="responsiveService.messageSentSuccess.value == true">Thank you for reaching out! I will respond as
+                soon as possible.</div>
+            <mat-checkbox [formControl]="disableSelect" class="privacy-policy">I've read the <a routerLink="privacy" target="_blank">privacy
+                    policy</a> and agree to the processing of my data as outlined.</mat-checkbox>
+            <button matNativeControl [disabled]="!disableSelect.value || !emailForm.valid " class="button"
+                mat-raised-button type="submit">Say hello ;)</button>
         </form>
-   
-        </div>
-        <a  data-aos="zoom-in-up"  data-aos-duration="300" class="go-up-button" href="#header"><img  src="assets/img/Go up button s2.png"></a>
+
+    </div>
+    <a data-aos="zoom-in-up" data-aos-duration="300" class="go-up-button" href="#header"><img
+            src="assets/img/Go up button s2.png"></a>
 </div>

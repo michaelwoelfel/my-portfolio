@@ -7,11 +7,11 @@ import { ResponsiveService } from "../responsive.service";
 import { FormGroupDirective } from '@angular/forms';
 import { ViewChild } from '@angular/core';
 import { EmailData } from "../email-data.interface";
+import { Router } from "@angular/router";
 
 /**
  * Interface for email data structure.
  */
-
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -19,10 +19,13 @@ import { EmailData } from "../email-data.interface";
 
 })
 export class ContactComponent {
+ 
   title = "Formspree.io Angular " + VERSION.major + " Example";
   secretKey: string = "xeqbdjnq";
   emailForm: FormGroup;
   @ViewChild(FormGroupDirective) formDirective?: FormGroupDirective;
+
+ 
  /**
    * Initializes the component with required services.
    * 
@@ -31,7 +34,7 @@ export class ContactComponent {
    * @param responsive BreakpointObserver for responsive design.
    * @param responsiveService Service for handling responsive functionalities.
    */
-  constructor( private fb: FormBuilder, private httpClient: HttpClient,public responsive: BreakpointObserver, public responsiveService: ResponsiveService) {
+  constructor( public router: Router,private fb: FormBuilder, private httpClient: HttpClient,public responsive: BreakpointObserver, public responsiveService: ResponsiveService) {
     this.emailForm = this.newForm;
   }
 
@@ -118,10 +121,12 @@ get httpOptions() {
     })
   }
 
-  openImpressum() {
-    window.open('/privacy', '_blank');
-  
+  generateUrlForPrivacy() {
+    return this.router.serializeUrl(
+      this.router.createUrlTree(['privacy'])
+    );
   }
+ 
 
 }
 

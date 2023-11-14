@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ResponsiveService } from '../responsive.service';
+import { Router } from '@angular/router';
+import { ImpressComponent } from '../impress/impress.component';
 
 @Component({
   selector: 'app-footer',
@@ -8,12 +10,14 @@ import { ResponsiveService } from '../responsive.service';
 })
 export class FooterComponent {
 
-    constructor(public responsiveService: ResponsiveService) {
+    constructor( public router: Router,public responsiveService: ResponsiveService) {
 
     }
 
-    openImpressum() {
-      window.open('/impress', '_blank');
-    
+    generateUrlForImpressum() {
+      return this.router.serializeUrl(
+        this.router.createUrlTree(['impress'])
+      );
     }
+  
 }

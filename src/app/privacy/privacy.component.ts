@@ -14,7 +14,6 @@ export class PrivacyComponent {
     }
 
     ngOnInit() {
-      
       this.responsiveService.hideMobile.subscribe(value =>  {
         this.hideMobile = value;
       });
