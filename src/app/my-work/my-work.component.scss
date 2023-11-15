@@ -81,10 +81,9 @@
 }
 
 .bubble-pollo {
-    
     position: absolute;
     width: 30%;
-    right: -12vw;
+    right: -10vh;
     top: 4vw;
     z-index: 0;
 }
@@ -227,6 +226,10 @@
         width: 5vw;
     }
 
+    .bubble-pollo {
+        right: -9.85vw;
+    }
+
     .bubble-work {
         top: 200px;
         width: 10vw;
@@ -333,6 +336,15 @@ margin-bottom: 20px;
     }
  }
 
+ @media only screen and (max-width: 700px) { 
+    .bubble-pollo {
+        right: -9.8vw;
+    }
+ }
+
+
+
+
 
  @media only screen and (max-width: 550px) { 
         .mywork {
@@ -348,6 +360,10 @@ margin-bottom: 20px;
         .heading {
             padding: 0;
             padding-top: 20px;
+        }
+
+        .bubble-pollo {
+            right: -9.7vw;
         }
 
         
@@ -373,10 +389,17 @@ margin-bottom: 20px;
             .bubble-mini{
                 left: 3vw;
             }
-
+            
             .project-skills {
                 font-size: 16px;
                 flex-wrap: wrap;
                 white-space: wrap;
             }
+ }
+
+
+ @media only screen and (max-width: 350px) { 
+    .bubble-pollo {
+        right: -9.6vw;
+    }
  }

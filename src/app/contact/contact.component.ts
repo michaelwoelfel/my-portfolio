@@ -73,6 +73,12 @@ export class ContactComponent {
   }
 
 
+  getErrorMessageText() {
+      return 'Please write minimum 20 letters';
+  }
+
+
+
   get email() {
     return this.emailForm.get('email') as FormControl;
   }

@@ -16,11 +16,17 @@
  .message-sent {
     font-size: 20px;
     font-family: 'Baloo';
-    color: #5988FF;
+    color:  #5988FF;
     text-align: center;
     padding-left: 10px;
-    
  }
+
+ .message-sent-placeholder {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    width: 100%;
+
+}
  
  .go-up-button {
      position: absolute;
@@ -264,7 +270,6 @@
     @media only screen and (max-width: 1300px) { 
         .message-sent {
             width: 80%;
-        
         }
 
         ::ng-deep .mat-mdc-checkbox {
@@ -335,7 +340,8 @@
 
      .message-sent  {
         width: 80vw;
-        text-align: left
+      
+        text-align: center;
     }
 
      .contact {
@@ -375,6 +381,10 @@
        
      }
  
+     .message-sent-placeholder {
+       padding-top: 30px;
+       padding-bottom: 30px;
+     }
      .text-heading {
          font-size: 20px;
          display: flex;

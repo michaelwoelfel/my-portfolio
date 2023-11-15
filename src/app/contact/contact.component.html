@@ -13,7 +13,7 @@
             <mat-form-field class="form-field">
                 <mat-label class="form-field">Your name</mat-label>
                 <input class="form-field" class="placeholder" matInput placeholder="Your Name" [formControl]="name"
-                    required>
+                   minlength="3" required>
             </mat-form-field>
             <mat-form-field class="full-width">
                 <mat-label>Your email</mat-label>
@@ -22,10 +22,17 @@
             </mat-form-field>
             <mat-form-field class="full-width">
                 <mat-label>Your message</mat-label>
+                <mat-error *ngIf="message.invalid">{{getErrorMessageText()}}</mat-error>
                 <textarea matInput
+                
                     placeholder="Hi Michael, i want to work with you in a new project, when do you have time for a meeting ?"
-                    [formControl]="message" required></textarea>
+                    [formControl]="message" minlength="20" required> </textarea>
+                   
             </mat-form-field>
+            
+            <div class="message-sent-placeholder"
+                *ngIf="responsiveService.messageSentSuccess.value == false">
+                </div>
             <div data-aos="fade-left" data-aos-duration="800" class="message-sent"
                 *ngIf="responsiveService.messageSentSuccess.value == true">Thank you for reaching out! I will respond as
                 soon as possible.</div>
