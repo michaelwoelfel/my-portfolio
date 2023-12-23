@@ -4,8 +4,13 @@
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-   
+  }
 
+  body {
+    max-width: 1920px!important;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    position: relative!important;
   }
 
   ::-webkit-scrollbar {

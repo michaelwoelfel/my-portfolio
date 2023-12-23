@@ -28,13 +28,13 @@ export const PROJECTS = [
         "github": "https://github.com/michaelwoelfel/Join-Kanban-Board",
     },
 
-    {
-        "img": "ring-of-fire.png",
-        "title": "Ring of Fire",
-        "skills": "Angular | Firebase | Typescript ",
-        "link": "https://ring-of-fire-28717.web.app/",
-        "description": "A simple card game with firebase synchronisation. Share the link from the new game and play with friends online.",
-        "github": "https://github.com/michaelwoelfel/ring-of-fire---Card-game",
-    },
+    // {
+    //     "img": "ring-of-fire.png",
+    //     "title": "Ring of Fire",
+    //     "skills": "Angular | Firebase | Typescript ",
+    //     "link": "https://ring-of-fire-28717.web.app/",
+    //     "description": "A simple card game with firebase synchronisation. Share the link from the new game and play with friends online.",
+    //     "github": "https://github.com/michaelwoelfel/ring-of-fire---Card-game",
+    // },
 
 ];
