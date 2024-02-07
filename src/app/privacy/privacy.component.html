@@ -1,14 +1,14 @@
 
 <div class="header">
     <div id="header" class="header-menu">
-        <img class="header-picture" src="assets/img/Group.svg">
+        <img  alt="Michael Wölfel Frontend Developer" class="header-picture" src="assets/img/Group.svg">
         <div class="nav-button" [class.visited]="responsiveService.isVisited | async"
             (click)="this.responsiveService.checkVisited()" *ngIf="this.hideMobile">
             <div></div>
         </div>
         <div *ngIf="!this.hideMobile" class="header-text"><a 
             href="#lets-work" class="header-link">About me</a><a href="#skill-set"  class="header-link"> Skill
-                set</a><a href="#my-work" class="header-link">My work</a></div>
+                set</a><a alt="Michael Wölfel Frontend Developer" href="#my-work" class="header-link">My work</a></div>
     </div>
     </div>
     <div id="impress" class="impress-container">

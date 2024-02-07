@@ -1,64 +1,46 @@
 
 .skill-set {
     height: auto;
-    background-image: url("/assets/img/blue-background.svg");
-    width: 100%;
+    background: linear-gradient(to bottom right, #5988FF,  #1755F4);
+    width: 100%; 
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding-bottom: 20px;
-    padding-top: 20px;
 }
+
+
 
 .skill-set-heading {
     font-family: 'Baloo';
     font-size: 96px;
     line-height: 96px;
     color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .skillcontainer {
-    height: auto;
-    width: 70%;
+    width: 957px;
+    height: 340px;
     display: flex;
-    gap: 150px;
+    gap: 120px;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-left: 7vw;
-    margin-right: 7vw;
-    padding-bottom: 20px;
+    padding-bottom: 100px;
 }
 
 .skill-img {
+    transition: transform 0.5s ease-in-out;
     &:hover {
-        animation: bounce 0.3s;
+        transform: translateY(-15px); 
     }
 
-    
 }
 
-@keyframes bounce {
-	0%, 100%, 20%, 50%, 80% {
-		-webkit-transform: translateY(0);
-		-ms-transform:     translateY(0);
-		transform:         translateY(0)
-	}
-	40% {
-		-webkit-transform: translateY(-30px);
-		-ms-transform:     translateY(-30px);
-		transform:         translateY(-30px)
-	}
-	60% {
-		-webkit-transform: translateY(-15px);
-		-ms-transform:     translateY(-15px);
-		transform:         translateY(-15px)
-	}
-}
 
 .skill {
     display: flex;
@@ -67,11 +49,12 @@
     justify-content: center;
     align-items: center;
     color: white;
-
+    transition: font-weight 0.5s ease-in-out;
     &:hover {
-        cursor:pointer;
-      
+       cursor: pointer;
+       font-weight: bold;
     }
+
 }
 
 .skill-selected {
@@ -81,6 +64,31 @@
     border-radius: 10px;
 }
 
+@media only screen and (max-width: 1000px) {
+    .skillcontainer {
+        width: 80%;
+        height: auto;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+  .skillcontainer {
+    gap: 80px;
+    width: 80%;
+  }
+  .skill {
+    width: 50px;
+    height: 100px;
+
+  }
+}
+
+@media only screen and (max-width: 480px) {
+    .skillcontainer {
+        gap: 60px;
+      }
+}
 
 
 
@@ -92,21 +100,10 @@
     }
 }
 
-    @media only screen and (max-width: 750px) {
-        .skillcontainer {
-            gap: 100px;
-        }
-    }
+   
 
-    @media only screen and (max-width: 620px) {
-        .skillcontainer {
-            gap: 50px;
-        }
-    }
+  
 
     @media only screen and (max-width: 460px) {
-        .skillcontainer {
-            gap: 25px;
-        }
+       
     }
-

@@ -4,7 +4,7 @@
         <div  (click)="responsiveService.sortBy(skill['skill-name'],i)"
             data-aos="zoom-in-up" data-aos-duration="2000" class="skill " 
             *ngFor="let skill of skills; index as i">
-            <img  id="skill{{i}}" class="skill-img " src="assets/img/{{skill['skill-pic']}}">
+            <img alt="Michael Wölfel Frontend Developer"  id="skill{{i}}" class="skill-img " src="assets/img/{{skill['skill-pic']}}">
             <span>{{skill['skill-name']}}</span>
         </div>
     </div>

@@ -2,16 +2,7 @@
 
 @import 'aos/dist/aos.css';
 
-.header {
-  position: relative;
-  background-image: url("/assets/img/hero-bg.png");
-  height: 100vh;
-  max-width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #5988FF;
-  position: relative;
-}
+
 
 ::-webkit-scrollbar {
   width: 15px;
@@ -201,6 +192,7 @@ body{
   left: 50%;
   z-index: 1;
   width: 20vw;
+  max-width: 300px;
   transform: translate(-50%, -50%);
 }
 
@@ -393,15 +385,11 @@ body{
 
 
   @media only screen and (max-width: 1000px) { 
-    .header {
-      height: 115vh;
-    }
+   
   }
 
   @media only screen and (max-width: 900px) { 
-    .header {
-     height: 100vh;
-    }
+    
 
     .blue-bubble{
       left: 40%;
@@ -409,17 +397,11 @@ body{
     }
   }
   @media only screen and (max-width: 700px) {  
-    .header {
-      height: 90vh;
-      background-size: cover;
-    }
+    
   }
 
   @media only screen and (max-width: 600px) {
-    .header {
-      background-size: cover;
-      height: 80vh;
-    }
+    
 
     .header-picture {
       padding-left: 10vw;
@@ -459,30 +441,15 @@ body{
 
 @media only screen and (max-width: 600px) { 
 .blue-bubble{
-  left: 40%;
-  width: 15vw;
+  .blue-bubble[_ngcontent-ng-c216025337] {
+    left: 50%;
+    width: 35vw;
 }
 }
 
-@media only screen and (max-width: 500px) {
-
-  .header {
-    height: 75vh;
-  }
-  .hello {
-    font-size: 7vw;
-  }
-
-  .font {
-    font-size: 15vw;
-    line-height: 10vw;
-  }
-
-  .font-developer {
-    font-size: 15vw;
-    
-  }
 }
+
+
 
 
 @media only screen and (max-width: 450px) {
@@ -491,9 +458,6 @@ body{
     top: 50px;
   }
 
-  .header {
-   
-  }
 
   .img-container{
 
@@ -504,14 +468,7 @@ body{
   }
 }
 
-@media only screen and (max-width: 450px) { 
-  .header {
-    height: 70vh;
-  }
-}
 
-@media only screen and (max-width: 450px) { 
-  .header {
-    height: 65vh;
-  }
-}
+
+
+

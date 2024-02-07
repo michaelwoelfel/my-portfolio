@@ -2,7 +2,7 @@
 
 .header {
   position: relative;
-  background-image: url("/assets/img/hero-bg.png");
+  background-image: url("/assets/img/hero-bg.svg");
   height: 100vh;
   max-width: 100%;
   background-repeat: no-repeat;
@@ -59,22 +59,22 @@
 
 .hello {
   font-family: "Montserrat";
-  font-size: 4vw;
-  line-height:5vw;
+  font-size: 4em;
+  line-height:1em;
   white-space: nowrap;
 }
 
 .font {
   font-family: 'Baloo';
-  font-size: 6vw;
-  line-height: 5vw;
+  font-size: 6em;
+  line-height: 0.8em;
   display: inline;
 }
 
 .font-developer {
   font-family: 'Baloo';
-  font-size: 7vw;
-  line-height: 6vw;
+  font-size: 7em;
+  line-height: 0.8em;
 }
 
 
@@ -401,9 +401,7 @@ body{
   }
 
   @media only screen and (max-width: 950px) { 
-   .img-container {
-    width: 55%;
-   }
+ 
   }
   
   }
@@ -426,7 +424,7 @@ body{
     }
 
     .img-container {
-      width: 70%;
+      width: 80%;
     }
     .michael {
      

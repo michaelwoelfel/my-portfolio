@@ -10,7 +10,7 @@
       
       width: 100%;
       height: 400px;
-      background-image: url("/assets/img/hero-bg.png");
+      background-image: url("/assets/img/hero-bg.svg");
       background-repeat: no-repeat;
       background-size: cover;
       color: black;
@@ -250,7 +250,7 @@
      
      @media only screen and (max-width: 1050px) {
        .header {
-         background-image: url("/assets/img/background-resp.png");
+         background-image: url("/assets/img/background-resp.svg");
           background-size: contain;
           background-repeat: no-repeat;
          

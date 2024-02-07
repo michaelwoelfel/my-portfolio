@@ -15,56 +15,45 @@ export class SkillSetComponent {
   skills = [
 
     {
-
-      "skill-pic": "Angular.png",
+      "skill-pic": "skill-icon1.svg",
       "skill-name": "Angular",
     },
     {
-      "skill-pic": "Material.png",
-      "skill-name": "Material",
-    },
-
-    {
-
-      "skill-pic": "Firebase.png",
-      "skill-name": "Firebase",
-    },
-
-    {
-      "skill-pic": "Typescript.png",
+      "skill-pic": "skill-icon2.svg",
       "skill-name": "Typescript",
     },
     {
-      "skill-pic": "Javascript.png",
+      "skill-pic": "skill-icon3.svg",
       "skill-name": "JavaScript",
     },
-
     {
-      "skill-pic": "HTML.png",
+      "skill-pic": "skill-icon4.svg",
       "skill-name": "HTML",
     },
-
     {
-      "skill-pic": "CSS.png",
-      "skill-name": "CSS",
-    },
-
-    {
-
-      "skill-pic": "API.png",
-      "skill-name": "APIs",
-    },
-
-    {
-      "skill-pic": "git.png",
-      "skill-name": "Git",
-    },
-
-    {
-      "skill-pic": "scrum.png",
+      "skill-pic": "skill-icon5.svg",
       "skill-name": "Scrum",
     },
-   
+    {
+      "skill-pic": "skill-icon6.svg",
+      "skill-name": "Firebase",
+    },
+    {
+      "skill-pic": "skill-icon7.svg",
+      "skill-name": "Git",
+    },
+    {
+      "skill-pic": "skill-icon8.svg",
+      "skill-name": "CSS",
+    },
+    {
+      "skill-pic": "skill-icon9.svg",
+      "skill-name": "APIs",
+    },
+    {
+      "skill-pic": "skill-icon10.svg",
+      "skill-name": "Material",
+    },
    
    
 
