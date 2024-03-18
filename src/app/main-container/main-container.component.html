@@ -2,7 +2,7 @@
     <app-resp-menu [ngClass]="{'fadeOut': !responsiveService.isVisited.value}"
     *ngIf="this.responsiveService.hideMobile.value && this.responsiveService.isVisited.value"></app-resp-menu>
   <app-header-component id="header"></app-header-component>
-      <img alt="Michael Wölfel Frontend Developer" class="blue-bubble" src="assets/img/circle.svg">
+      <img  loading="lazy" alt="Michael Wölfel Frontend Developer" class="blue-bubble" src="assets/img/circle.svg">
       <app-lets-work id="lets-work"></app-lets-work>
       <app-skill-set id="skill-set"></app-skill-set>
       <app-my-work id="my-work"></app-my-work>

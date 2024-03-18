@@ -20,7 +20,7 @@ export const PROJECTS = [
     },
 
     {
-        "img": "join.png",
+        "img": "join.jpg",
         "title": "Join",
         "skills": "HTML | CSS | JavaScript ",
         "link": "https://michael-woelfel.com/Mein%20Join/",

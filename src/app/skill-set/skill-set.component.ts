@@ -31,8 +31,8 @@ export class SkillSetComponent {
       "skill-name": "HTML",
     },
     {
-      "skill-pic": "skill-icon5.svg",
-      "skill-name": "Scrum",
+      "skill-pic": "skill-icon5.png",
+      "skill-name": "Wordpress",
     },
     {
       "skill-pic": "skill-icon6.svg",

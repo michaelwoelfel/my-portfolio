@@ -309,17 +309,10 @@ body{
   scroll-behavior: smooth;
 }
 
-@media only screen and (max-width: 1100px) {
-  .hello {
-    font-size: 3vw;
-  }
-}
-
-
 
 @media only screen and (max-width: 1184px) {
   .header {
-    background-image: url("/assets/img/background-resp.png");
+    background-image: url("/assets/img/background-resp.svg");
 
     
   }
@@ -364,15 +357,20 @@ body{
   }
 
   .hello {
-    font-size: 5.5vw;
+    font-size: 0.3em;
+    line-height: 0.6em
+  
   }
 
   .font {
-    font-size: 10vw;
+    font-size: 0.5em;
+    line-height: 0.6m
   }
+  
 
   .font-developer {
-    font-size: 10vw;
+    font-size: 0.5em;
+    line-height: 0.1em;
   }
 
   .introduction {
@@ -397,6 +395,8 @@ body{
     .header {
     height:  90vh;
     }
+
+
 
   }
 
@@ -490,7 +490,7 @@ body{
   }
 
   .header {
-    background-image: url("/assets/img/background-resp.png");
+    background-image: url("/assets/img/background-resp.svg");
    background-size: contain;
     height: 70vh;
     
