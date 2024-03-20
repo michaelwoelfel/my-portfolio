@@ -4,7 +4,7 @@ export const PROJECTS = [
     {
         "img": "dabubble.png",
         "title": "Dabubble",
-        "skills": "Angular| Typescript | Material | Firebase",
+        "skills": "Angular | Typescript | Firebase",
         "link": "https://michael-woelfel.com/dabubble",
         "description": "Slack like chat programm build with Angular, used Firebase as backend.",
         "github": "https://github.com/michaelwoelfel/",
