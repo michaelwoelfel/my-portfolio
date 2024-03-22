@@ -19,7 +19,7 @@
     line-height: 96px;
     color: white;
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
 }
 
 .skillcontainer {
@@ -41,6 +41,20 @@
     }
 
 }
+
+.claim {
+    font-weight: bold;
+    color: white;
+    align-self: center;
+    font-size: 22px; /* Increased font size */
+    line-height: 1.3; /* Adjusted line height for better readability */
+    width: 50%;
+    margin: 0 auto 40px; /* Centered the block and added spacing to the bottom */
+    padding: 10px 0; /* Added padding to the top and bottom */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+    text-align: center;
+}
+
 
 
 .skill {
@@ -65,11 +79,26 @@
     border-radius: 10px;
 }
 
+@media only screen and (max-width: 1300px) {
+   
+    .claim {
+      
+        width: 70%;
+       
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     .skillcontainer {
         width: 80%;
         height: auto;
         flex-wrap: wrap;
+    }
+
+    .claim {
+      
+        width: 70%;
+       
     }
 }
 
