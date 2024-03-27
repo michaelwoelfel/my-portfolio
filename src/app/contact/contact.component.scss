@@ -330,6 +330,7 @@
          width: 80%;
          margin:0;
          text-align: left;
+         display: flex;
      }
     .contact {
         padding-left: 6vw;
@@ -394,14 +395,29 @@
         }
 
         .text-footer {
-            text-align: left;
+            text-align: center;
         }
         .footer-contact-span {
-            display: flex;
+          text-align: center;
         }
 
         .text-heading {
             padding-left: 0;
+        }
+
+        .text {
+            text-align: center;
+            padding-right: 0;
+        }
+
+        .contact-button {
+            align-self: center;
+        }
+
+        .contact-wrapper {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
         }
     }
  
@@ -418,7 +434,7 @@
      }
      .text-heading {
          font-size: 20px;
-         display: flex;
+       text-align: center;
      }
 
      .contact {

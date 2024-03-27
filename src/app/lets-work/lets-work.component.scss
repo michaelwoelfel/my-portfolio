@@ -43,7 +43,6 @@
 
 .left-side {
     display: flex;
-    padding-left: 10vh;
     align-items: center;
     justify-content: center;
     height: auto;
@@ -100,6 +99,8 @@
     font-weight: bold;
     margin-bottom: 10px;
     font-size: 24px;
+    text-align: center;
+    align-self: center;
 }
 
 .right-span {
@@ -164,6 +165,10 @@
         align-items: center;
     }
 
+    .left-span{
+        font-size: 50px;
+    }
+
     .service-wrapper {
         flex-direction: column;
         width: 100%;
@@ -181,6 +186,7 @@
         align-self: center;
         width: 80%;
         text-align: center;
+ 
     }
     .right-side {
         padding: 0;
@@ -190,21 +196,20 @@
     }
 
     .contact-button {
-   
+        width: 80%;
     }
 
-    @media only screen and (max-width: 750px) {
-        .left-span {
-            font-size: 15vw;
-            text-align: center;
-        
-        }
-    }
+
     
     @media only screen and (max-width: 750px) {
         .left-span {
            line-height: 12vw;
-        
+           font-size: 40px;
+           margin-bottom: 20px;
+        }
+
+        .service-span {
+            font-size: 18px;
         }
     }
 }

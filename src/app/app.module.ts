@@ -27,6 +27,7 @@ import { RespMenuComponent } from './resp-menu/resp-menu.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { ImpressComponent } from './impress/impress.component';
 import { MainContainerComponent } from './main-container/main-container.component';
+import { TestimonialComponent } from './testimonial/testimonial.component';
 
 
 
@@ -45,6 +46,7 @@ import { MainContainerComponent } from './main-container/main-container.componen
     PrivacyComponent,
     ImpressComponent,
     MainContainerComponent,
+    TestimonialComponent,
   
   ],
   imports: [
