@@ -900,10 +900,10 @@
                         </g>
                         </svg>
                <span *ngIf="!flipState[1]" id="text1"  class="service-span">Website Changes and Bug Fixes</span>
-               <span *ngIf="flipState[1]" id="text-back1" class="service-span back">Give your website the edge with quick updates and solid fixes.</span>
+               <span *ngIf="flipState[1]" id="text-back1" class="service-span back">Give your website the edge with quick updates and solid fixes</span>
                                 </div>
-                      <div class="service-container">
-                        <svg
+                      <div (click)="flipService(2)" [ngClass]="{'flipped': flipState[2]}" class="service-container">
+                        <svg *ngIf="!flipState[2]"
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
                         id="body_1"
@@ -941,8 +941,8 @@
                           />
                         </g>
                       </svg>
-                        <span  class="service-span">Technical Support</span>
-                        <span *ngIf="flipState[2]" id="text-back2" class="service-span back">Give your website the edge with quick updates and solid fixes.</span>
+                        <span *ngIf="!flipState[2]"  class="service-span">Technical Support</span>
+                        <span *ngIf="flipState[2]" id="text-back2" class="service-span back">Get immediate, expert help whenever you need it</span>
 
                         
                       </div>
@@ -950,8 +950,8 @@
                     </div>
   
                     <div class="service-wrapper">
-                      <div class="service-container">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="200" height="200">
+                      <div (click)="flipService(3)" [ngClass]="{'flipped': flipState[3]}" class="service-container">
+                        <svg *ngIf="!flipState[3]" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="200" height="200">
               
                           <g transform="matrix(0.7490637 0 0 0.7490637 0 0)">
                             <g transform="matrix(0.1 0 -0 -0.1 0 200)">
@@ -959,12 +959,13 @@
                             </g>
                           </g>
                           </svg>
-                        <span  class="service-span">Responsive Design</span>
+                        <span *ngIf="!flipState[3]"  class="service-span">Responsive Design</span>
+                        <span *ngIf="flipState[3]"  class="service-span back">Ensure your website looks perfect on any device</span>
                       </div>
           
     
-            <div class="service-container">
-              <svg
+            <div (click)="flipService(4)" [ngClass]="{'flipped': flipState[4]}" class="service-container">
+              <svg *ngIf="!flipState[4]"  
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
               id="body_1"
@@ -1130,13 +1131,14 @@
                 </g>
               </g>
             </svg>
-              <span  class="service-span">Custom Solutions</span>
+              <span *ngIf="!flipState[4]"    class="service-span">Custom Solutions</span>
+              <span *ngIf="flipState[4]"    class="service-span back">My custom solutions are crafted to fit your specific business needs</span>
             </div>
                     </div>
                     <div class="service-wrapper">
-                      <div class="service-container">
+                      <div  (click)="flipService(5)" [ngClass]="{'flipped': flipState[5]}" class="service-container">
   
-                        <svg
+                        <svg  *ngIf="!flipState[5]"
                           version="1.0"
                           xmlns="http://www.w3.org/2000/svg"
                           width="200.000000px"
@@ -1201,12 +1203,13 @@
                             />
                           </g>
                         </svg>
-                        <span  class="service-span">New Websites</span>
+                        <span  *ngIf="!flipState[5]"  class="service-span">New Websites</span>
+                        <span  *ngIf="flipState[5]"  class="service-span back">Start fresh with a modern, impactful website</span>
                       </div>
               
-                      <div class="service-container">
+                      <div  (click)="flipService(6)" [ngClass]="{'flipped': flipState[6]}" class="service-container">
               
-                        <svg
+                        <svg *ngIf="!flipState[6]"
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
                         id="body_1"
@@ -1328,7 +1331,8 @@
                           />
                         </g>
                       </svg>
-                        <span class="service-span">Maintenance</span>
+                        <span *ngIf="!flipState[6]" class="service-span">Maintenance</span>
+                        <span *ngIf="flipState[6]" class="service-span back">My maintenance services keep your website updated, secure, and performing at its best</span>
                       </div>
                     </div>
   

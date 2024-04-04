@@ -158,6 +158,13 @@
   
   .back {
     transform: rotateY(180deg);
+    min-height: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+
     /* Positionierung und Styling für die Rückseite */
   }
 
