@@ -69,6 +69,7 @@
 .service-wrapper {
     display: flex;
     justify-content: space-between;
+    gap: 30px;
 }
 
 .button-wrapper {
@@ -87,9 +88,28 @@
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 10px;
-    box-shadow: 4px 2px 7px #888888;
-    width: 40%;
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+    width: 400px;
+
+
+    &:hover {
+        box-shadow: 4px 2px 7px #888888;
+        cursor: pointer;
+    }
 }
+
+  
+.service-container .flipped {
+    transform: rotateY(180deg);
+  }
+  
+  
+
+  .service-container {
+
+  }
+  
 
 .service-span {
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
@@ -122,9 +142,24 @@
     max-width: 200px;
 }
 
-.left-span {
-    
-}
+
+
+  .flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .front {
+    /* Positionierung und Styling für die Vorderseite */
+  }
+
+  .front, .back {
+    backface-visibility: hidden; /* Hide the back side of the element when it is rotated away from the viewer */
+  }
+  
+  .back {
+    transform: rotateY(180deg);
+    /* Positionierung und Styling für die Rückseite */
+  }
 
 
 
