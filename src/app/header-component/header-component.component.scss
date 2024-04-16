@@ -131,6 +131,19 @@
   width: auto;
   height: 60px;
   padding-left: 10vh;
+  gap:10px;
+
+  img{
+    margin-left: 10px;
+    height: 55px;
+  }
+
+  img:hover {
+    cursor:pointer;
+    transform: scale(1.05);
+    box-shadow: 1px 1px 20px 0em #5988FF;
+
+  }
 }
 
 .scroll-and-bar {

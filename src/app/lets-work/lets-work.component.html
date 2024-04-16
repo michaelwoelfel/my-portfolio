@@ -1,8 +1,12 @@
 <div class="lets-work">
   <div class="left-side">
-    <span class="left-span">Enhance Your Digital Presence</span>
+    <span   *ngIf="responsiveService.language == 'german'" class="left-span">Verbessern Sie ihre Online-Präsenz</span>
+
+    <span   *ngIf="responsiveService.language == 'english'" class="left-span">Enhance Your Digital Presence</span>
   </div>
-  <span class="claim">Tailored Web Solutions with a Personal Touch</span>
+  <span   *ngIf="responsiveService.language == 'german'" class="claim">Maßgeschneiderte Weblösungen mit persönlicher Note</span>
+
+  <span   *ngIf="responsiveService.language == 'english'" class="claim">Tailored Web Solutions with a Personal Touch</span>
   <div class="right-side">
     <img
       loading="lazy"
@@ -1353,7 +1357,7 @@
           class="contact-button"
           href="https://calendly.com/michael-woelfel/30min"
           target="_blank"
-          >Free 30-minute website analysis</a
+          >Book free consultation</a
         >
       </div>
     </div>

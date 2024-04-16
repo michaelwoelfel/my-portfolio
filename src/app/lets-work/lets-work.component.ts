@@ -1,3 +1,4 @@
+import { ResponsiveService } from './../responsive.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,7 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./lets-work.component.scss']
 })
 export class LetsWorkComponent {
+ constructor(public responsiveService: ResponsiveService) {
 
+ }
   flipState = {
     1: false,
     2: false,

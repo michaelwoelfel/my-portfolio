@@ -1,10 +1,16 @@
-<div class="contact-heading"><span class="contact">Contact</span> </div>
+<div class="contact-heading"><span  *ngIf="responsiveService.language == 'english'"  class="contact">Contact</span> <span  *ngIf="responsiveService.language == 'german'"  class="contact">Kontakt</span>  </div>
 <div class="contact-container">
     <div class="left-side">
-        <span class="text-heading">Do you have a project?</span>
-        <span class="text">Contact me through this form, ready to help you solve your problems.</span>
-        <div class="contact-wrapper"><span class="text-footer">Need a Developer?</span><span class="footer-contact-span"> Contact me !</span>
-            <a class="contact-button" href="https://calendly.com/michael-woelfel/30min" target="_blank">Book free consultation</a>
+        <span  *ngIf="responsiveService.language == 'english'"  class="text-heading">Do you have a project?</span>
+        <span  *ngIf="responsiveService.language == 'german'"  class="text-heading">Haben Sie ein Projekt?</span>
+        <span   *ngIf="responsiveService.language == 'english'" class="text">Contact me through this form, ready to help you solve your problems.</span>
+        <span   *ngIf="responsiveService.language == 'german'" class="text">Kontaktieren Sie mich über dieses Formular, ich stehe bereit, um Ihnen bei der Lösung Ihrer Probleme zu helfen.</span>
+        <div class="contact-wrapper">
+            
+            <span *ngIf="responsiveService.language == 'english'"  class="text-footer">Need a Developer?</span><span class="footer-contact-span"> Contact me !</span>
+            <span *ngIf="responsiveService.language == 'german'"  class="text-footer">Brauchen Sie einen Entwickler?</span><span class="footer-contact-span"> Schreiben Sie mir!</span>
+            <a *ngIf="responsiveService.language == 'english'"  class="contact-button" href="https://calendly.com/michael-woelfel/30min" target="_blank">Book free consultation</a>
+            <a *ngIf="responsiveService.language == 'german'" class="contact-button" href="https://calendly.com/michael-woelfel/30min" target="_blank">Kostenloses Gespräch buchen</a>
 
         </div>
         <div class="bubble-container"> <img  alt="Michael Wölfel Frontend Developer" data-aos="zoom-in-up" data-aos-duration="2000" class="bubble_1"

@@ -1,36 +1,92 @@
 <div class="header">
-    <div id="header" class="header-menu">
-        <img   loading="lazy" alt="Michael Wölfel Frontend Developer"  class="header-picture" src="assets/img/Group.svg">
-        <div class="nav-button" [class.visited]="responsiveService.isVisited | async"
-            (click)="this.responsiveService.checkVisited()" *ngIf="this.hideMobile">
-            <div></div>
-        </div>
-        <div *ngIf="!this.hideMobile" class="header-text"><a href="#lets-work" class="header-link">Services</a><a
-                href="#skill-set" class="header-link"> Skill
-                set</a><a href="#my-work" class="header-link">My work</a></div>
-    </div>
-    <div class="introduction">
-        <div class="img-container">
-            <img  loading="lazy" alt="Michael Wölfel Frontend Developer" class="michael" src="assets/img/michael.png">
-        </div>
+  <div id="header" class="header-menu">
+    <div class="header-picture">
+     
+      
+      
+<img (click)="responsiveService.changeLanguage('german')" src="assets/img/germany.png">
+<img (click)="responsiveService.changeLanguage('english')" src="assets/img/united-kingdom.png">
 
-        <div class="introduction-right-side">
-            <div  class="introduction-text"><span class="hello">Hello! I am
-                    Michael</span>
-                <span class="font">MAKING YOUR WEB IDEAS</span>
-                <span class="font-developer">COME TRUE</span>
-            </div>
-            <div class="scroll-and-bar">
-                <span data-aos="fade-down" data-aos-duration="2000" class="scroll">SCROLL</span>
-                <div data-aos="fade-down" data-aos-duration="2000" class="blue-bar"></div>
-                <div class="icons">
-                    <a alt="Michael Wölfel Frontend Developer" href="https://github.com/michaelwoelfel/" target="_blank"><img alt="Michael Wölfel Frontend Developer" class="icon github-icon"
-                            src="assets/img/github.svg"></a>
-                    <a alt="Michael Wölfel Frontend Developer" href="#contact"><img class="icon" src="assets/img/mail.png"></a>
-                    <a alt="Michael Wölfel Frontend Developer" href="https://www.linkedin.com/in/michael-w%C3%B6lfel-105bb7177/" target="_blank"><img
-                        alt="Michael Wölfel Frontend Developer" class="icon" src="assets/img/linkedin.svg"></a>
-                </div>
-            </div>
-        </div>
+      
+      
+      
+    
+  </div>
+    <div
+      class="nav-button"
+      [class.visited]="responsiveService.isVisited | async"
+      (click)="this.responsiveService.checkVisited()"
+      *ngIf="this.hideMobile"
+    >
+      <div></div>
     </div>
+    <div *ngIf="!this.hideMobile" class="header-text">
+      <a href="#lets-work" class="header-link">Services</a
+      ><a href="#skill-set" class="header-link"> Skill set</a
+      ><a
+        *ngIf="responsiveService.language == 'german'"
+        href="#my-work"
+        class="header-link"
+        >Meine Arbeit</a
+      >
+      <a
+      *ngIf="responsiveService.language == 'english'"
+      href="#my-work"
+      class="header-link"
+      >My work</a
+    >
+    </div>
+  </div>
+  <div class="introduction">
+
+    <div class="img-container">
+      <img
+        loading="lazy"
+        alt="Michael Wölfel Frontend Developer"
+        class="michael"
+        src="assets/img/michael.png"
+      />
+    </div>
+
+    <div class="introduction-right-side">
+      <div class="introduction-text">
+        <span class="hello">Hello! I am Michael</span>
+        <span class="font">MAKING YOUR WEB IDEAS</span>
+        <span class="font-developer">COME TRUE</span>
+      </div>
+      <div class="scroll-and-bar">
+        <span data-aos="fade-down" data-aos-duration="2000" class="scroll"
+          >SCROLL</span
+        >
+        <div
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          class="blue-bar"
+        ></div>
+        <div class="icons">
+          <a
+            alt="Michael Wölfel Frontend Developer"
+            href="https://github.com/michaelwoelfel/"
+            target="_blank"
+            ><img
+              alt="Michael Wölfel Frontend Developer"
+              class="icon github-icon"
+              src="assets/img/github.svg"
+          /></a>
+          <a alt="Michael Wölfel Frontend Developer" href="#contact"
+            ><img class="icon" src="assets/img/mail.png"
+          /></a>
+          <a
+            alt="Michael Wölfel Frontend Developer"
+            href="https://www.linkedin.com/in/michael-w%C3%B6lfel-105bb7177/"
+            target="_blank"
+            ><img
+              alt="Michael Wölfel Frontend Developer"
+              class="icon"
+              src="assets/img/linkedin.svg"
+          /></a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

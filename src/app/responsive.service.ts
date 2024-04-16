@@ -8,10 +8,11 @@ import { PROJECTS } from './projects.constant';
 })
 export class ResponsiveService {
  public hideMobile = new BehaviorSubject<boolean>(true);
-  public hideScroll= new BehaviorSubject<boolean>(false);
+  public hideScroll = new BehaviorSubject<boolean>(false);
   public isVisited = new BehaviorSubject<boolean>(false);
   public hideContent = true;
   public messageSentSuccess = new BehaviorSubject<boolean>(false);
+  language = 'german';
   public projects = PROJECTS;
  
 
@@ -75,4 +76,8 @@ export class ResponsiveService {
   this.hideContent = false;
 }
 
+changeLanguage(language:string) {
+  this.language = language
+}
+ 
 }
