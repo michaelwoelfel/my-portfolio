@@ -1,7 +1,9 @@
 <div class="skill-set">
     <span class="skill-set-heading">Skill set</span>
-    <span class="claim">Crafting web experiences with a diverse skill set.<br>
+    <span  *ngIf="responsiveService.language == 'english'"  class="claim">Crafting web experiences with a diverse skill set.<br>
         From Angular to WordPress, I use the latest technologies to bring your vision to life.</span>
+        <span *ngIf="responsiveService.language == 'german'"  class="claim">Web-Erlebnisse mit vielfältigen Fähigkeiten gestalten.
+            Von Angular bis WordPress nutze ich die neuesten Technologien, um Ihre Visionen zu verwirklichen.</span>
     <div class="skillcontainer">
         <div  (click)="responsiveService.sortBy(skill['skill-name'],i)"
             data-aos="zoom-in-up" data-aos-duration="2000" class="skill " 

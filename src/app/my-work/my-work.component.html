@@ -3,8 +3,11 @@
     <img   loading="lazy" alt="Michael Wölfel Frontend Developer" data-aos="zoom-in-up" data-aos-duration="2000" class="bubble2" src="assets/img/circle.svg">
     <img  loading="lazy" alt="Michael Wölfel Frontend Developer" data-aos="zoom-in-up" data-aos-duration="2000" class="bubble-mini" src="assets/img/circle.svg">
     <img  loading="lazy" alt="Michael Wölfel Frontend Developer" data-aos="zoom-in-up" data-aos-duration="2000" class="bubble-work" src="assets/img/circle.svg">
-    <div class="heading"><span class="mywork">My work</span><span class="sample">This page is a sample of my work -
+    <div *ngIf="responsiveService.language == 'english'" class="heading"><span class="mywork">My work</span><span class="sample">This page is a sample of my work -
             please feel free to try them out.</span></div>
+
+            <div  *ngIf="responsiveService.language == 'german'" class="heading"><span class="mywork">Meine Arbeit</span><span class="sample">Diese Seite ist ein Beispiel meiner Arbeit -
+                fühlen Sie sich frei, sie auszuprobieren.</span></div>
     <div class="project-container" *ngFor="let project of responsiveService.projects; index as i"
         [ngClass]="{'row-reverse': i % 2 !== 0}">
         <div data-aos="flip-right" data-aos-duration="2000" class="img-container"> <a  target="_blank" style="width: 100%"
@@ -12,7 +15,9 @@
         <div class="description-container" [ngClass]="{'align-right': i % 2 !== 0}">
             <span class="project-name">{{project.title}}</span>
             <span class="project-skills">{{project.skills}}</span>
-            <span class="project-description">{{project.description}}</span>
+            <span  *ngIf="responsiveService.language == 'german'"  class="project-description">{{project.descriptiongerman}}</span>
+
+            <span  *ngIf="responsiveService.language == 'english'"  class="project-description">{{project.description}}</span>
             <img  loading="lazy"  alt="Michael Wölfel Frontend Developer" *ngIf="i==1" class="bubble-pollo" src="assets/img/circle.svg">
             <img  loading="lazy" alt="Michael Wölfel Frontend Developer"  *ngIf="i==0" class="bubble-join" src="assets/img/circle.svg">
             <div class="button-container">

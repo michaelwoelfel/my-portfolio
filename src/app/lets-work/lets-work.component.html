@@ -4,7 +4,7 @@
 
     <span   *ngIf="responsiveService.language == 'english'" class="left-span">Enhance Your Digital Presence</span>
   </div>
-  <span   *ngIf="responsiveService.language == 'german'" class="claim">Maßgeschneiderte Weblösungen mit persönlicher Note</span>
+    <span   *ngIf="responsiveService.language == 'german'" class="claim">Maßgeschneiderte Web-Lösungen mit persönlicher Note</span>
 
   <span   *ngIf="responsiveService.language == 'english'" class="claim">Tailored Web Solutions with a Personal Touch</span>
   <div class="right-side">
@@ -903,9 +903,11 @@
                           />
                         </g>
                         </svg>
-               <span *ngIf="!flipState[1]" id="text1"  class="service-span">Website Changes and Bug Fixes</span>
-               <span *ngIf="flipState[1]" id="text-back1" class="service-span back">Give your website the edge with quick updates and solid fixes</span>
-                                </div>
+               <span  *ngIf="responsiveService.language == 'english' && !flipState[1]" id="text1"  class="service-span">Website Changes and Bug Fixes</span>
+               <span *ngIf="responsiveService.language == 'english' && flipState[1]" id="text-back1" class="service-span back">Give your website the edge with quick updates and solid fixes</span>
+               <span *ngIf="responsiveService.language == 'german' && !flipState[1]" class="service-span">Änderungen und Fehlerbehebungen</span>
+               <span *ngIf="responsiveService.language == 'german' && flipState[1]" class="service-span back">Verleihen Sie Ihrer Website den entscheidenden Vorteil mit schnellen Updates und soliden Fehlerbehebungen</span>
+              </div>
                       <div (click)="flipService(2)" [ngClass]="{'flipped': flipState[2]}" class="service-container">
                         <svg *ngIf="!flipState[2]"
                         xmlns="http://www.w3.org/2000/svg"
@@ -945,9 +947,10 @@
                           />
                         </g>
                       </svg>
-                        <span *ngIf="!flipState[2]"  class="service-span">Technical Support</span>
-                        <span *ngIf="flipState[2]" id="text-back2" class="service-span back">Get immediate, expert help whenever you need it</span>
-
+                        <span *ngIf="responsiveService.language == 'english' && !flipState[2]"  class="service-span">Technical Support</span>
+                        <span *ngIf="responsiveService.language == 'english' && flipState[2]" id="text-back2" class="service-span back">Get immediate, expert help whenever you need it</span>
+                        <span *ngIf="responsiveService.language == 'german' && !flipState[2]" class="service-span">Technischer Support</span>
+                        <span *ngIf="responsiveService.language == 'german' && flipState[2]" class="service-span back">Erhalten Sie sofortige, fachkundige Hilfe, wann immer Sie sie benötigen.</span>
                         
                       </div>
               
@@ -963,8 +966,11 @@
                             </g>
                           </g>
                           </svg>
-                        <span *ngIf="!flipState[3]"  class="service-span">Responsive Design</span>
-                        <span *ngIf="flipState[3]"  class="service-span back">Ensure your website looks perfect on any device</span>
+                        <span *ngIf="responsiveService.language == 'english' && !flipState[3]"  class="service-span">Responsive Design</span>
+                       
+                        <span *ngIf="responsiveService.language == 'english' && flipState[3]" class="service-span back">Ensure your website looks perfect on any device</span>
+                        <span *ngIf="responsiveService.language == 'german' && !flipState[3]" class="service-span">Responsives Design</span>
+                        <span *ngIf="responsiveService.language == 'german' && flipState[3]" class="service-span back">Stellen Sie sicher, dass Ihre Website auf jedem Gerät perfekt aussieht.</span>
                       </div>
           
     
@@ -1135,8 +1141,10 @@
                 </g>
               </g>
             </svg>
-              <span *ngIf="!flipState[4]"    class="service-span">Custom Solutions</span>
-              <span *ngIf="flipState[4]"    class="service-span back">My custom solutions are crafted to fit your specific business needs</span>
+              <span *ngIf="responsiveService.language == 'english' && !flipState[4]"   class="service-span">Custom Solutions</span>
+              <span *ngIf="responsiveService.language == 'english' && flipState[4]"    class="service-span back">My custom solutions are crafted to fit your specific business needs</span>
+              <span *ngIf="responsiveService.language == 'german' && !flipState[4]" class="service-span">Individuelle Lösugen</span>
+              <span *ngIf="responsiveService.language == 'german' && flipState[4]" class="service-span back">Meine individuellen Lösungen werden speziell auf Ihre geschäftlichen Anforderungen zugeschnitten.</span>
             </div>
                     </div>
                     <div class="service-wrapper">
@@ -1207,8 +1215,11 @@
                             />
                           </g>
                         </svg>
-                        <span  *ngIf="!flipState[5]"  class="service-span">New Websites</span>
-                        <span  *ngIf="flipState[5]"  class="service-span back">Start fresh with a modern, impactful website</span>
+                        <span *ngIf="responsiveService.language == 'english' && !flipState[5]"  class="service-span">New Websites</span>
+                        <span  *ngIf="responsiveService.language == 'english' && flipState[5]" class="service-span back">Start fresh with a modern, impactful website</span>
+
+                        <span *ngIf="responsiveService.language == 'german' && !flipState[5]" class="service-span">Neue Webseiten</span>
+                        <span *ngIf="responsiveService.language == 'german' && flipState[5]" class="service-span back">Starten Sie neu mit einer modernen, wirkungsvollen Website.</span>
                       </div>
               
                       <div  (click)="flipService(6)" [ngClass]="{'flipped': flipState[6]}" class="service-container">
@@ -1335,9 +1346,12 @@
                           />
                         </g>
                       </svg>
-                        <span *ngIf="!flipState[6]" class="service-span">Maintenance</span>
-                        <span *ngIf="flipState[6]" class="service-span back">My maintenance services keep your website updated, secure, and performing at its best</span>
-                      </div>
+                        <span *ngIf="responsiveService.language == 'english' && !flipState[6]" class="service-span">Maintenance</span>
+                      
+                  <span *ngIf="responsiveService.language == 'english' && flipState[6]" class="service-span back">My maintenance services keep your website updated, secure, and performing at its best</span>
+                  <span *ngIf="responsiveService.language == 'german' && !flipState[6]" class="service-span">Wartung</span>
+                  <span *ngIf="responsiveService.language == 'german' && flipState[6]" class="service-span back">Meine Wartungsdienste halten Ihre Website aktuell, sicher und leistungsfähig</span>
+                </div>
                     </div>
   
   
@@ -1353,12 +1367,17 @@
           > -->
         </div>
   
-        <a
+        <a  *ngIf="responsiveService.language == 'english'"
           class="contact-button"
           href="https://calendly.com/michael-woelfel/30min"
           target="_blank"
-          >Book free consultation</a
-        >
+          >Book free consultation</a>
+
+          <a  *ngIf="responsiveService.language == 'german'"
+          class="contact-button"
+          href="https://calendly.com/michael-woelfel/30min"
+          target="_blank"
+          >Kostenlose Beratung</a>
       </div>
     </div>
   </div>

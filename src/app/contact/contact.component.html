@@ -7,8 +7,8 @@
         <span   *ngIf="responsiveService.language == 'german'" class="text">Kontaktieren Sie mich über dieses Formular, ich stehe bereit, um Ihnen bei der Lösung Ihrer Probleme zu helfen.</span>
         <div class="contact-wrapper">
             
-            <span *ngIf="responsiveService.language == 'english'"  class="text-footer">Need a Developer?</span><span class="footer-contact-span"> Contact me !</span>
-            <span *ngIf="responsiveService.language == 'german'"  class="text-footer">Brauchen Sie einen Entwickler?</span><span class="footer-contact-span"> Schreiben Sie mir!</span>
+            <span *ngIf="responsiveService.language == 'english'"  class="text-footer">Need a Developer?</span><span *ngIf="responsiveService.language == 'english'"  class="footer-contact-span"> Contact me !</span>
+            <span *ngIf="responsiveService.language == 'german'"  class="text-footer">Brauchen Sie einen Entwickler?</span><span *ngIf="responsiveService.language == 'german'" class="footer-contact-span"> Schreiben Sie mir!</span>
             <a *ngIf="responsiveService.language == 'english'"  class="contact-button" href="https://calendly.com/michael-woelfel/30min" target="_blank">Book free consultation</a>
             <a *ngIf="responsiveService.language == 'german'" class="contact-button" href="https://calendly.com/michael-woelfel/30min" target="_blank">Kostenloses Gespräch buchen</a>
 
@@ -38,12 +38,15 @@
                    
             </mat-form-field>
             
-            <div class="message-sent-placeholder"
+            <div  class="message-sent-placeholder"
                 *ngIf="responsiveService.messageSentSuccess.value == false">
                 </div>
-            <div data-aos="fade-left" data-aos-duration="800" class="message-sent"
-                *ngIf="responsiveService.messageSentSuccess.value == true">Thank you for reaching out! I will respond as
+            <div  *ngIf="responsiveService.language == 'english' && responsiveService.messageSentSuccess.value == true" data-aos="fade-left" data-aos-duration="800" class="message-sent"
+                >Thank you for reaching out! I will respond as
                 soon as possible.</div>
+
+                <div  *ngIf="responsiveService.language == 'german' && responsiveService.messageSentSuccess.value == true" data-aos="fade-left" data-aos-duration="800" class="message-sent"
+                >Vielen Dank, dass Sie sich gemeldet haben! Ich werde so schnell wie möglich antworten.</div>
             <mat-checkbox [formControl]="disableSelect" class="privacy-policy">I've read the <a routerLink="privacy" target="_blank">privacy
                     policy</a> and agree to the processing of my data as outlined.</mat-checkbox>
             <button matNativeControl [disabled]="!disableSelect.value || !emailForm.valid " class="button"
